@@ -1,0 +1,9 @@
+<div class="toolbar-items" anosrv-eventbus-director channel="profileNavSidebar">
+  <span class="d-sm-none" [innerHtml]="iconService.getIcon('profile', { width: '21px', height: '21px' })"></span>
+  <span class="d-none d-lg-block" [innerHtml]="iconService.getIcon('profile', { width: '36px', height: '36px' })"></span>
+  <span class="profile-label">{{ "header.daten" | translate }}</span>
+  <svg id="profile-arrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="14" height="14" viewBox="0 0 16 16" [class.rotate-arrow]="isOpen">
+    <path fill="#000000" d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z">
+    </path>
+  </svg>
+</div>

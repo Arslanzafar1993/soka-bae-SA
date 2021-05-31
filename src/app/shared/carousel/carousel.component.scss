@@ -1,0 +1,7 @@
+@import "~src/scss/variables";
+
+:host {
+  display: block;
+  border-top: $border-color solid 1vh;
+  border-bottom: $border-color solid 2vh;
+}

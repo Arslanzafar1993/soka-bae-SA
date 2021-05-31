@@ -1,0 +1,29 @@
+{
+  "login": {
+    "intro": [
+      "Herzlich Willkommen im Arbeitnehmer-Online-Service bei SOKA-BAU.",
+      "Ein Service nur für Dich.",
+      "Informiere Dich schnell und einfach zu"
+    ],
+    "punkte": [
+      "Urlaubsanspruch",
+      "Renten- und Versorgungsleistungen",
+      "Jobangebote und vieles mehr "
+    ],
+    "nutzer": "Benutzername",
+    "passwort": "Passwort",
+    "vergessen": {
+      "nutzer": "Benutzername vergessen?",
+      "passwort": "Passwort vergessen?"
+    },
+    "anmelden": "Anmelden",
+    "hilfe": {
+      "title": "Benutzername und/oder Passwort vergessen?",
+      "text": [
+        "Kein Problem! Wir helfen weiter.",
+        "Setze Dich mit uns in Verbindung.",
+        "Wenn Du die Telefonnummer anklickst, wirst Du mit uns verbunden."
+      ]
+    }
+  }
+}

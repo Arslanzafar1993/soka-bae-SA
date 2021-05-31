@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<testsuite name="Firefox 67.0 (Windows 7)" package="anosrv-suite" timestamp="2021-05-20T05:01:01" id="0" hostname="V7374" tests="72" errors="0" failures="0" time="1.135">
+  <properties>
+    <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:67.0) Gecko/20100101 Firefox/67.0"/>
+  </properties>
+  <testcase name="EventBusService should be created" time="0.04" classname="Firefox_67_0_(Windows_7)..EventBusService"/>
+  <testcase name="EventbusDirectorDirective should create an instance" time="0.001" classname="Firefox_67_0_(Windows_7)..EventbusDirectorDirective"/>
+  <testcase name="FooterComponent should create" time="0.102" classname="Firefox_67_0_(Windows_7)..FooterComponent"/>
+  <testcase name="HeaderComponent should handle navigate home event" time="0.084" classname="Firefox_67_0_(Windows_7)..HeaderComponent"/>
+  <testcase name="HeaderComponent should create" time="0.021" classname="Firefox_67_0_(Windows_7)..HeaderComponent"/>
+  <testcase name="AppComponent should create the app" time="0.152" classname="Firefox_67_0_(Windows_7)..AppComponent"/>
+  <testcase name="AppGuard should return TRUE for canDeativate if the current Component does not have a canDeactivate" time="0.009" classname="Firefox_67_0_(Windows_7)..AppGuard"/>
+  <testcase name="AppGuard should return the value of a Components canDeactivate function as canDeactivate" time="0.004" classname="Firefox_67_0_(Windows_7)..AppGuard"/>
+  <testcase name="AppGuard should create the AppGuard" time="0.005" classname="Firefox_67_0_(Windows_7)..AppGuard"/>
+  <testcase name="AppGuard should not canActivate when not logged in and navigate to /login" time="0.011" classname="Firefox_67_0_(Windows_7)..AppGuard"/>
+  <testcase name="AppGuard should canActivate when logged in" time="0.006" classname="Firefox_67_0_(Windows_7)..AppGuard"/>
+  <testcase name="ProgessbarComponent should create" time="0.024" classname="Firefox_67_0_(Windows_7)..ProgessbarComponent"/>
+  <testcase name="UserComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UserComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="AnosHttpClient should enrich the header of a GET with Authorization when logged in" time="0.006" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should enrich the header of a PUT with Authorization when logged in" time="0.005" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should pass down DELETE and call extractToken" time="0.007" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should enrich the header of a POST with Authorization when logged in" time="0.005" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should pass down POST and call extractToken" time="0.011" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should pass down GET and call extractToken" time="0.005" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should pass down PUT and call extractToken" time="0.004" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should refresh token when updateTokenTrigger is fired" time="0.004" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should create a Header without Authorization when no not logged in" time="0.004" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should be created" time="0.008" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should create a Header with Authorization when none given when logged in" time="0.004" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should enrich the header of a DELETE with Authorization when logged in" time="0.004" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="AnosHttpClient should not enrich a Header with Authorization when no not logged in" time="0.003" classname="Firefox_67_0_(Windows_7)..AnosHttpClient"/>
+  <testcase name="UrlaubComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="UrlaubGuthabenComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubGuthabenComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="UrlaubGuthabenAuszahlungComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubGuthabenAuszahlungComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="NavigationService loads config for &quot;/urlaub&quot;" time="0.017" classname="Firefox_67_0_(Windows_7)..NavigationService"/>
+  <testcase name="NavigationService loads inherited values for &quot;/urlaub/guthaben/auszahlung" time="0.014" classname="Firefox_67_0_(Windows_7)..NavigationService"/>
+  <testcase name="NavigationService should be created" time="0.005" classname="Firefox_67_0_(Windows_7)..NavigationService"/>
+  <testcase name="NavigationService loads base config" time="0.007" classname="Firefox_67_0_(Windows_7)..NavigationService"/>
+  <testcase name="UrlaubGuthabenEndeComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubGuthabenEndeComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ButtonComponent should put the icon after the TEXT if iconName is given and buttonPosition is &quot;right&quot;" time="0.042" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should place an Icon in front of the TEXT if iconName is given" time="0.015" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should add the class smallText if smallText is TRUE" time="0.012" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should create" time="0.009" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should have buttonId as the buttons ID" time="0.009" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should not contain a link when no HREF is given" time="0.013" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should contain a link when a HREF is given" time="0.012" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent should contain a link with target, when href and hrefTarget are given" time="0.011" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="ButtonComponent setting buttonDisable to TRUE disables the button" time="0.008" classname="Firefox_67_0_(Windows_7)..ButtonComponent"/>
+  <testcase name="LoginComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..LoginComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="HeroImageComponent should create" time="0.024" classname="Firefox_67_0_(Windows_7)..HeroImageComponent"/>
+  <testcase name="WindowService should be created" time="0.005" classname="Firefox_67_0_(Windows_7)..WindowService"/>
+  <testcase name="LoginService should extract and refresh token from responses with headers in lowercase" time="0.005" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should be created" time="0.008" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should fire a updateTokenTrigger 5 minutes after last update" time="0.005" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should logout and navigate to login when receiving an error response 401" time="0.004" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should get token from sucessful login" time="0.004" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should extract and refresh token from responses with headers in Upper-Kebab-Case" time="0.003" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="LoginService should construct correct body for login request" time="0.004" classname="Firefox_67_0_(Windows_7)..LoginService"/>
+  <testcase name="SliderComponent should create" time="0.039" classname="Firefox_67_0_(Windows_7)..SliderComponent"/>
+  <testcase name="StartComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..StartComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ToolbarUserComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..ToolbarUserComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ToolbarComponent should create" time="0.018" classname="Firefox_67_0_(Windows_7)..ToolbarComponent"/>
+  <testcase name="TileComponent should create" time="0.018" classname="Firefox_67_0_(Windows_7)..TileComponent"/>
+  <testcase name="InfohilfeComponent should create" time="0.058" classname="Firefox_67_0_(Windows_7)..InfohilfeComponent"/>
+  <testcase name="UrlaubDetailComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubDetailComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="ProfileComponent should create" time="0.022" classname="Firefox_67_0_(Windows_7)..ProfileComponent"/>
+  <testcase name="CarouselComponent should create" time="0.01" classname="Firefox_67_0_(Windows_7)..CarouselComponent"/>
+  <testcase name="SideNavContainerComponent should close sidebars when user triggers a route change" time="0.062" classname="Firefox_67_0_(Windows_7)..SideNavContainerComponent"/>
+  <testcase name="SideNavContainerComponent should only display one sidebar menu" time="0.025" classname="Firefox_67_0_(Windows_7)..SideNavContainerComponent"/>
+  <testcase name="SideNavContainerComponent should toggle main navigation (left) sidebar" time="0.024" classname="Firefox_67_0_(Windows_7)..SideNavContainerComponent"/>
+  <testcase name="SideNavContainerComponent should create" time="0.019" classname="Firefox_67_0_(Windows_7)..SideNavContainerComponent"/>
+  <testcase name="SideNavContainerComponent should toggle profile navigation (top) sidebar" time="0.025" classname="Firefox_67_0_(Windows_7)..SideNavContainerComponent"/>
+  <testcase name="TileComponent should create" time="0.015" classname="Firefox_67_0_(Windows_7)..TileComponent"/>
+  <testcase name="UrlaubGuthabenBestaetigungComponent should create" time="0" classname="Firefox_67_0_(Windows_7)..UrlaubGuthabenBestaetigungComponent">
+    <skipped/>
+  </testcase>
+  <testcase name="InfoIComponent should create" time="0.011" classname="Firefox_67_0_(Windows_7)..InfoIComponent"/>
+  <testcase name="SidebarComponent should create" time="0.007" classname="Firefox_67_0_(Windows_7)..SidebarComponent"/>
+  <testcase name="ModalComponent should create" time="0.017" classname="Firefox_67_0_(Windows_7)..ModalComponent"/>
+  <system-out>
+    <![CDATA[Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) WARN: 'Navigation triggered outside Angular zone, did you forget to call 'ngZone.run()'?'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-svg-icon-sprite' is not a known element:
+1. If 'anosrv-svg-icon-sprite' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-svg-icon-sprite' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-svg-icon-sprite' is not a known element:
+1. If 'anosrv-svg-icon-sprite' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-svg-icon-sprite' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'src' since it isn't a known property of 'anosrv-svg-icon-sprite'.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'src' since it isn't a known property of 'anosrv-svg-icon-sprite'.'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-hero-image' is not a known element:
+1. If 'anosrv-hero-image' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-hero-image' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-button' is not a known element:
+1. If 'anosrv-button' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-button' is not a known element:
+1. If 'anosrv-button' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: ''anosrv-button' is not a known element:
+1. If 'anosrv-button' is an Angular component, then verify that it is part of this module.
+2. If 'anosrv-button' is a Web Component then add 'CUSTOM_ELEMENTS_SCHEMA' to the '@NgModule.schemas' of this component to suppress this message.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'text' since it isn't a known property of 'anosrv-button'.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'text' since it isn't a known property of 'anosrv-button'.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'text' since it isn't a known property of 'anosrv-button'.'
+,Firefox 67.0 (Windows 7) ERROR: 'Can't bind to 'href' since it isn't a known property of 'anosrv-button'.'
+
+]]>
+  </system-out>
+  <system-err/>
+</testsuite>

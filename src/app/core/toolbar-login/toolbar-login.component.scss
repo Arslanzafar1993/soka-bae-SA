@@ -1,0 +1,19 @@
+@import "../../../scss/_variables";
+
+.container {
+  padding: 14px;
+  height:48px;
+  border-bottom: 1px solid $border-color;
+  display: flex;
+}
+
+svg {
+  width: 21px;
+  height: 21px;
+}
+
+h2 {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 10px;
+}

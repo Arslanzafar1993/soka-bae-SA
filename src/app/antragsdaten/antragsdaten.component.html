@@ -1,0 +1,189 @@
+<h1>Antragsdaten</h1>
+
+<form [formGroup]="preloadForm" class="py-2">
+  <input type="text" placeholder="Arbeitnehmer Nr." formControlName="arbeitnehmerNummer" required>
+  <br/>
+  <button (click)="preload()">Laden</button>
+</form>
+
+<hr/>
+<form [formGroup]="antragForm">
+  <label>
+    Vertragsnummer
+  </label>
+  <input type="number" formControlName="vertragNummer" required>
+
+  <label>
+    Arbeitnehmer Nr.
+  </label>
+  <input type="text" formControlName="arbeitnehmerNummer" required>
+
+  <label>
+    Anrede
+  </label>
+  <select formControlName="anrede" required>
+    <option *ngFor="let data of dropdownService.ANREDEN.data" [value]="data.value">
+      {{ data.label }}
+    </option>
+  </select>
+  
+  <label>
+    Vorname
+  </label>
+  <input type="text" formControlName="vorname" required>
+  
+  <label>
+    Nachname
+  </label>
+  <input type="text" formControlName="nachname" required>
+  
+  <label>
+    Strasse und Hausnummer
+  </label>
+  <input type="text" formControlName="strasseUndHausnummer" required>
+
+  <label>
+    Postleitzahl
+  </label>
+  <input type="text" formControlName="postleitzahl" required>
+  
+  <label>
+    Ort
+  </label>
+  <input type="text" formControlName="ort" required>
+  
+  <label>
+    Land
+  </label>
+  <select formControlName="land" required>
+    <option *ngFor="let data of dropdownService.laender" [value]="data.code">
+      {{ data.name }}
+    </option>
+  </select>
+  
+  <label>
+    Telefonnummer
+  </label>
+  <input type="text" formControlName="telefonNummer" required>
+  
+  <label>
+    Email
+  </label>
+  <input type="text" formControlName="email" required>
+  
+  <label>
+    Kontoinhaber
+  </label>
+  <input type="text" formControlName="kontoinhaber" required>
+  
+  <label>
+    IBAN
+  </label>
+  <input type="text" formControlName="iban" required>
+
+  <label>
+    BIC
+  </label>
+  <input type="text" formControlName="bic" required>
+  
+  <label>
+    Geldinstitut
+  </label>
+  <input type="text" formControlName="geldinstitut" required>
+  
+  <label>
+    Geburtsdatum
+  </label>
+  <input type="date" formControlName="geburtsdatum" required>
+  
+  <label>
+    Steuer ID
+  </label>
+  <input type="text" formControlName="steuerId" required>
+  
+  <label>
+    Krankenversicherungsart
+  </label>
+  <select formControlName="krankenversicherungsart" required>
+    <option *ngFor="let data of dropdownService.KRANKENVERSICHERUNGSART.data" [value]="data.value">
+      {{ data.label }}
+    </option>
+  </select>
+  
+  <label>
+    IK Nummer
+  </label>
+  <input type="text" formControlName="ikNummer" required>
+  
+  <label>
+    Nachweis Kind
+  </label>
+  <input type="checkbox" formControlName="nachweisKind" value="true">
+  
+  <label>
+    Rentenart
+  </label>
+  <select formControlName="rentenart" required>
+    <option *ngFor="let data of dropdownService.RENTENART.data" [value]="data.value">
+      {{ data.label }}
+    </option>
+  </select>
+  
+  <label>
+    Versicherungsnummer
+  </label>
+  <input type="text" formControlName="versicherungNummer" required>
+  
+  <label>
+    Rentenbeginn
+  </label>
+  <input type="date" formControlName="rentenBeginn" required>
+  
+  <label>
+    Versicherungsfall
+  </label>
+  <input type="date" formControlName="versicherungsfall" required>
+
+  <label>
+    Postabrechnung Nummer
+  </label>
+  <input type="text" formControlName="postabrechnungNummer" required>
+  
+  <label>
+    Einverständniserklärung Datenschutz
+  </label>
+  <input type="checkbox" formControlName="einverstaendniserklaerungDatenschutz" value="true">
+  
+  <label>
+    Bevollmächtigung Datenaustausch
+  </label>
+  <input type="checkbox" formControlName="bevollmaechtigungDatenaustausch" value="true">
+  
+  <label>
+    Auslöser
+  </label>
+  <select formControlName="ausloeser" required>
+    <option *ngFor="let data of dropdownService.AUSLOESER.data" [value]="data.value">
+      {{ data.label }}
+    </option>
+  </select>  
+  
+  <label>
+    Eingangskanal
+  </label>
+  <select formControlName="eingangskanal" required>
+    <option *ngFor="let data of dropdownService.EINGANGSKANAL.data" [value]="data.value">
+      {{ data.label }}
+    </option>
+  </select>
+  
+  <label>
+    Eingangsdatum
+  </label>
+  <input type="text" formControlName="eingangsdatum" required>
+
+  <br/>
+  <br/>
+  <button type="button" (click)="submit()">Absenden</button>
+
+</form>

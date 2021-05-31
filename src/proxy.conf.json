@@ -1,0 +1,8 @@
+{
+  "/anosrv-rest-webapp/api/v1/*": {
+    "target": "http://entwicklung.webapps.soka-bau.de",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

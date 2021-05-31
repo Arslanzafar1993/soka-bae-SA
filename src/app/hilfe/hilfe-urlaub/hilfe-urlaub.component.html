@@ -1,0 +1,35 @@
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q1.title' | translate">
+{{ 'hilfe.faq-urlaub.q1.response' | translate }}
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q2.title' | translate">
+  {{ 'hilfe.faq-urlaub.q2.response' | translate }}
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q3.title' | translate:jahrAktuell">
+  {{ 'hilfe.faq-urlaub.q3.response' | translate:jahrAktuell }}
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q4.title' | translate:jahrAnspruch">
+  {{ 'hilfe.faq-urlaub.q4.response' | translate:jahrAnspruch }}
+  <a routerLink="/urlaub/guthaben">{{ 'hilfe.faq-urlaub.antrag-link' | translate }}</a>
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q5.title' | translate:jahrAnspruch">
+  {{ 'hilfe.faq-urlaub.q5.response' | translate }}
+  <a routerLink="/urlaub/guthaben">{{ 'hilfe.faq-urlaub.antrag-link' | translate }}</a>
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q6.title' | translate:jahrAnspruch">
+  <p>{{ 'hilfe.faq-urlaub.q6.p1' | translate }}</p>
+  <p>{{ 'hilfe.faq-urlaub.q6.p2' | translate }}
+    <a routerLink="/urlaub/detail">{{ 'hilfe.faq-urlaub.q6.link' | translate }}</a>
+  </p>
+</anosrv-hilfe-faq-box>
+
+<anosrv-hilfe-faq-box [title]="'hilfe.faq-urlaub.q7.title' | translate:jahrAnspruch">
+  <p>{{ 'hilfe.faq-urlaub.q7.response' | translate }}</p>
+  <ul>
+    <li *ngFor="let point of q7Points">{{ point }}</li>
+  </ul>
+</anosrv-hilfe-faq-box>

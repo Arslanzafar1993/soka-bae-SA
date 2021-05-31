@@ -1,0 +1,33 @@
+<div
+  [attr.aria-modal]="modal"
+  [class]="styleClass"
+  id="profile-sidebar"
+  [ngClass]="{
+    'ui-sidebar ui-widget ui-widget-content ui-shadow': true,
+    'ui-sidebar-active': visible,
+    'ui-sidebar-left': position === 'left',
+    'ui-sidebar-right': position === 'right',
+    'ui-sidebar-top': position === 'top',
+    'ui-sidebar-bottom': position === 'bottom'
+  }"
+  [ngStyle]="style"
+  role="complementary"
+>
+  <div *ngIf="showCloseIcon" role="button" [ngClass]="{ 'ui-sidebar-close': true, left: showCloseIcon === 'left', right: showCloseIcon === 'right' }">
+    <span id="sidebar-close" (tap)="close($event)" tabindex="0" [attr.aria-label]="ariaCloseLabel">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      width="19" height="19" viewBox="0 0 612 612" fill="#707070" xml:space="preserve">
+        <g>
+          <g id="cross">
+            <g>
+              <polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 
+                306,341.411 576.521,611.397 612,575.997 341.459,306.011"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+    </span>
+  </div>
+
+  <ng-content select="nav"></ng-content>
+</div>

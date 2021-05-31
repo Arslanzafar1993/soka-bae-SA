@@ -1,0 +1,10 @@
+@import "../../../scss/_variables";
+
+p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: $color-blue;
+  text-decoration: none;
+}

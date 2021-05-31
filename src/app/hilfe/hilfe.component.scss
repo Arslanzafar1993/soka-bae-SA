@@ -1,0 +1,87 @@
+@import '../../scss/subpage';
+
+.hotline-nummer {
+  float: right;
+  font-weight: bold;
+}
+
+.hotline-info {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  font-size: 12px;
+}
+
+.dropdown {
+  font-family: "PT Sans", sans-serif;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  height: 31px;
+  position: absolute;
+  right: 0;
+  min-width: 120px;
+
+  .icon {
+    float: right;
+    margin-left: 10px;
+    position: relative;
+    display: inline-block;
+
+    .icon-overlay {
+      position: absolute;
+      z-index: 1;
+      display: block;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  button {
+    position: relative;
+    box-sizing: inherit;
+    z-index: 81;
+    margin: 0;
+    height: 31px;
+    border: 1px solid $color-silver;
+    border-right: none;
+    background: none;
+    font-size: 15px;
+    padding: 5px 9px;
+    min-width:155px;
+    text-align: left;
+
+    .rotate * {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dropdown-body {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: #ffffff;
+    background: $color-white;
+    z-index: 80;
+    border: 1px solid $color-silver;
+    border-top: none;
+    border-right: none;
+    margin-top: 0px;
+    height: auto;
+    max-height: 100px;
+    transition: max-height .6s;
+
+    &.hidden {
+      margin-top: -1px;
+      max-height: 0px;
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        padding: 5px 9px;
+      }
+    }
+  }
+}

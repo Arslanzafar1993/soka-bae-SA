@@ -1,0 +1,74 @@
+{
+  "base": {
+    "icon": "",
+    "image": "",
+    "toolbar": "",
+    "hideToolbar": false,
+    "hideHeader": false,
+    "lightHeader": false
+  },
+  "/home": {
+    "icon": "home",
+    "toolbar": "toolbar.startseite"
+  },
+  "/login": {
+    "hideToolbar": true,
+    "hideHeader": true,
+    "lightHeader": true
+  },
+  "/user": {
+    "hideToolbar": true,
+    "hideHeader": true
+  },
+  "/urlaub": {
+    "icon": "urlaub",
+    "image": "assets/images/urlaub-gross.jpg",
+    "toolbar": "toolbar.urlaub"
+  },
+  "/urlaub/detail": {
+    "toolbar": "toolbar.urlaub-detail"
+  },
+  "/urlaub/guthaben": {
+    "toolbar": "toolbar.urlaub-guthaben"
+  },
+  "/urlaub/guthaben/auszahlung": {
+    "toolbar": "toolbar.urlaub-guthaben-auszahlung",
+    "hideToolbar": true,
+    "hideHeader": true
+  },
+  "/urlaub/guthaben/pruefung": {
+    "toolbar": "toolbar.urlaub-guthaben-pruefung",
+    "hideToolbar": true,
+    "hideHeader": true
+  },
+  "/urlaub/guthaben/zusammenfassung": {
+    "hideToolbar": true,
+    "hideHeader": true
+  },
+  "/urlaub/guthaben/bestaetigung": {
+    "hideToolbar": true,
+    "hideHeader": true
+  },
+  "/urlaub/guthaben/ende": {
+    "toolbar": "toolbar.urlaub-guthaben-ende"
+  },
+  "/hilfe": {
+    "toolbar": "toolbar.hilfe",
+    "icon": "info-big",
+    "image": "assets/images/hilfe-gross.jpg",
+    "submenu": "hilfe.faq-dropdown"
+  },
+  "/hilfe/allgemein": {
+    "toolbar": "toolbar.hilfe-allgemein",
+    "submenu": "hilfe.allgemein"
+  },
+  "/hilfe/urlaub": {
+    "toolbar": "toolbar.hilfe-urlaub",
+    "submenu": "hilfe.urlaub"
+  },
+  "/kontakt": {
+    "toolbar": "toolbar.kontakt",
+    "icon": "soka",
+    "image": "assets/images/urlaub-gross.jpg"
+  }
+}

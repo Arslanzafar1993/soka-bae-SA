@@ -1,0 +1,16 @@
+@import '../../scss/subpage';
+@import '../../scss/variables';
+
+.hotline-info {
+  position: absolute;
+  bottom: 10px;
+  left: 8px;
+  font-size: 12px;
+}
+.phone-heading {
+  float: right;
+  font-weight: bold;
+  font-size: 15px;
+  color: $color-charcoal;
+}
+

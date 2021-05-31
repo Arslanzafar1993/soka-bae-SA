@@ -1,0 +1,101 @@
+<ng-container *ngFor="let container of userView.containers; last as isLast">
+  <div [@slideDownUp] class="question-box" *ngIf="editMode && containerName === container.name">
+    <p>
+      Du kannst Deine Daten jetzt eingeben und speichern.<br/>
+      Speicherst Du nicht, bleiben die bisherigen Daten erhalten.
+    </p>
+  </div>
+
+  <form [formGroup]="userForm">
+    <div class="user-container" [class.border-bottom]="isLast">
+      <anosrv-edit-button id="edit-{{container.name}}" [semiEditable]="container.isSemiEditable" (click)="edit(container.name)"></anosrv-edit-button>
+
+      <ng-container *ngFor="let item of container.items; let i = index; let last = last">
+        <div class="entry bg d-flex justify-content-between"
+            [class.entry-first]="i == 0"
+            [class.entry-last]="last && editMode && containerName === container.name">
+            {{ item.label }}
+        </div>
+
+        <!-- Edit Mode -->
+        <div class="entry"
+             [class.entry-last]="last"
+             [class.entry-first]="i == 0"
+             *ngIf="editMode && containerName === container.name && item.editable">
+          <anosrv-input
+            [form]="userForm"
+            [controlName]="item.formControlName"
+            [maxLength]="item.maxLength"
+            *ngIf="item.editable && item.controlType === 'input'">
+          </anosrv-input>
+
+          <ng-select *ngIf="item.editable && item.controlType === 'searchSelect'"
+            [id]="item.formControlName"
+            [items]="item.selectData.data"
+            [selectOnTab]="true"
+            bindValue="portalId"
+            bindLabel="name"
+            labelForId="portalId"
+            placeholder="Wählen Sie ein Land"
+            [formControlName]="item.formControlName">
+          </ng-select>
+
+          <div class="entry-radio" *ngIf="item.editable && item.controlType === 'radio'">
+            <div class="radio-container">
+              <input type="radio" id="evangelisch" value="EVANGELISCH" [formControlName]="item.formControlName">
+              <label class="radio-label" for="evangelisch">Evangelisch</label>
+            </div>
+
+            <div class="radio-container">
+              <input type="radio" id="katholisch" value="KATHOLISCH" [formControlName]="item.formControlName">
+              <label class="radio-label" for="katholisch">Römisch-Katholisch</label>
+            </div>
+
+            <div class="radio-container">
+              <input type="radio" id="none" value="KEINE" [formControlName]="item.formControlName">
+              <label class="radio-label" for="none">nicht kirchensteuerpflichtig</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="entry" [class.entry-first]="i == 0" *ngIf="editMode && !item.editable && container.name === containerName">
+          <div class="d-flex justify-content-between">
+            <span class="flex-grow-1">
+              {{ dropdownService.displayValue(item) }}
+            </span>
+            <anosrv-info-i *ngIf="item.modalId" [name]="item.modalId"></anosrv-info-i>
+          </div>
+        </div>
+
+        <div class="entry" [class.entry-first]="i == 0" *ngIf="editMode && container.name !== containerName">
+          <div class="d-flex justify-content-between">
+            <span class="flex-grow-1">
+              {{ dropdownService.displayValue(item) }}
+            </span>
+            <anosrv-info-i *ngIf="item.modalId" [name]="item.modalId"></anosrv-info-i>
+          </div>
+        </div>
+
+        <div class="entry" [class.entry-first]="i == 0" *ngIf="!editMode">
+          <div class="d-flex justify-content-between">
+            <span class="flex-grow-1">
+              {{ dropdownService.displayValue(item) }}
+            </span>
+            <anosrv-info-i *ngIf="item.modalId" [name]="item.modalId"></anosrv-info-i>
+          </div>
+        </div>
+      </ng-container>
+      <anosrv-button class="button-absolute" buttonId="save-{{containerName}}" iconName="check" text="speichern"
+                     (click)="save()" *ngIf="editMode && containerName === container.name"></anosrv-button>
+    </div>
+  </form>
+</ng-container>
+
+<anosrv-app-modal modalId="annrModal">
+  <ul>
+    <li>Die Arbeitnehmernummer (AN-Nr.) ändert sich nicht.</li>
+    <li>Deshalb kann die AN-Nr. von Dir nicht geändert werden.</li>
+    <li>Die AN-Nr. wird von uns zu Beginn Deiner Tätigkeit im Baugewerbe festgelegt.</li>
+    <li>Sie findet sich auf vielen Schreiben, die Du von uns erhältst.</li>
+  </ul>
+</anosrv-app-modal>

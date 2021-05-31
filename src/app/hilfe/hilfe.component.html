@@ -1,0 +1,37 @@
+<div class="page-container">
+  <anosrv-hero-image></anosrv-hero-image>
+
+  <!--div class="page-header">
+    <span class="icon mt-1" [innerHtml]="iconService.getIcon('info-big')"></span>
+    <h2 class="margin-l5">{{ "hilfe.title" | translate }}</h2>
+  </div-->
+
+  <div class="section-container">
+    <div class="section-header">
+      <h2>{{ 'hilfe.faq' | translate }}</h2>
+
+      <span class="dropdown">
+        <button (click)="toggle()">
+          {{ selected | translate }}
+          <span class="icon">
+            <span class="icon-overlay"></span>
+            <span [innerHTML]="chevron"></span>
+          </span>
+        </button>
+        <div class="dropdown-body" [class.hidden]="!faqToggle">
+          <ul>
+            <li (click)="toggle('/hilfe')"
+                *ngIf="not('hilfe')">{{ 'hilfe.faq-dropdown'}}</li>
+            <li (click)="toggle('/hilfe/allgemein')"
+                *ngIf="not('allgemein')">{{ 'hilfe.allgemein' | translate }}</li>
+            <li (click)="toggle('/hilfe/urlaub')"
+                *ngIf="not('urlaub')">{{ 'hilfe.urlaub' | translate }}</li>
+          </ul>
+        </div>
+      </span>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+
+</div>

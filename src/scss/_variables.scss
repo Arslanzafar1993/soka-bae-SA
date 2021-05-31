@@ -1,0 +1,57 @@
+$color-white:           #ffffff;
+$color-dark-white:      #f7f7f7;
+$color-light-grey:      #ebebeb;
+$color-silver:          #cccccc;
+$color-grey:            #808080;
+$color-charcoal:        #404040;
+$color-dark-grey:       $color-charcoal;
+
+$color-aqua-spring:     #b8e5b8;
+$color-light-green:     $color-aqua-spring;
+$color-lavender:        #e3f2fb;
+$color-light-blue:      $color-lavender;
+$color-off-yellow:      #faf0d9;
+$color-light-yellow:    $color-off-yellow;
+
+$color-forrest-green:   #1e9423;
+$color-green:           $color-forrest-green;
+$color-alizarin:        #d62727;
+$color-red:             $color-alizarin;
+$color-azure-radiance:  #7a0090;
+$color-purple:          $color-azure-radiance;
+$color-blue-radiance:   #0066a1;
+$color-blue:            $color-blue-radiance;
+$color-tangerine:       #f29400;
+$color-orange:          $color-tangerine;
+
+$color-text:            $color-charcoal;
+$color-icon:            $color-grey;
+
+$color-border:          $color-silver;
+$color-border-accent:   $color-orange;
+$color-border-dark:     $color-grey;
+
+$color-bg:              $color-dark-white;
+$color-bg-accent:       $color-off-yellow;
+$color-bg-blueish:      $color-lavender;
+$color-bg-greenish:     $color-aqua-spring;
+$color-bg-white:        $color-white;
+
+
+
+$page-min-height-mobil: calc(100vh - 142px);
+$page-min-height-pc: calc(100vh - 285px);
+
+$main-text-color: black;
+$border-color: $color-silver;
+$border-slide-color: $color-dark-white;
+
+$index-offset: 5;
+$sidebar-z-index: 100;
+$header-z-index: $sidebar-z-index - $index-offset;
+$backdrop-z-index: $header-z-index - $index-offset;
+
+@mixin box-centered {
+  display: flex;
+  align-items: center;
+}

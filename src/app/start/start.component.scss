@@ -1,0 +1,56 @@
+@import "../../scss/_variables";
+
+.page-container {
+  min-height: $page-min-height-mobil;
+  padding-bottom: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 21px;
+  margin-bottom: 20px;
+  background-color: #fff;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 132px 132px;
+  row-gap: 21px;
+  column-gap: 36px;
+  justify-content: center;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.border {
+  height: 1px;
+  background-color: #ccc;
+}
+
+@media (min-width: 992px) {
+  .page-container {
+    min-height: $page-min-height-pc;
+    padding-bottom: 0;
+  }
+
+  .grid-container {
+    grid-template-columns: 330px 330px;
+    row-gap: 10%;
+    column-gap: 15%;
+    height: 600px;
+    padding-top: 20px;
+    background-color: $color-dark-white;
+  }
+
+  .dummy-container {
+    height: 300px;
+    width: 660px;
+    margin: auto;
+    background: #d6d6d6;
+  }
+}

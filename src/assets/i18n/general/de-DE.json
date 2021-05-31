@@ -1,0 +1,58 @@
+{
+  "profile-nav": {
+    "profile": "{{nutzer}}\n Mein Profil",
+    "einstellungen": "Einstellungen",
+    "hilfe": "Hilfe",
+    "logout": "Logout"
+  },
+  "header": {
+    "daten": "Mein Profil"
+  },
+  "toolbar": {
+    "startseite": "Startseite",
+    "urlaub": "Urlaub",
+    "urlaub-detail": "Urlaub Urlaubsanspruch",
+    "urlaub-guthaben": "Urlaub Guthaben",
+    "urlaub-guthaben-auszahlung": "Urlaub Guthaben",
+    "urlaub-guthaben-pruefung": "Urlaub Prüfung",
+    "urlaub-guthaben-ende": "Urlaub",
+    "hilfe": "Info & Hilfe",
+    "kontakt": "Kontakt",
+    "hilfe-allgemein": "Info & Hilfe Allgemein",
+    "hilfe-urlaub": "Info & Hilfe Urlaub"
+  },
+  "main-nav": {
+    "home" : "Startseite",
+    "urlaub" : "Urlaub",
+    "rente" : "Rente",
+    "postfach" : "Postfach",
+    "info" : "Info & Hilfe",
+    "karriere" : "Karriere",
+    "jobboerse" : "Job-Börse",
+    "meine-daten" : "Mein Profil"
+  },
+  "start": {
+    "urlaub" : "Urlaub",
+    "rente" : "Rente",
+    "postfach" : "Postfach",
+    "info" : "Info & Hilfe",
+    "karriere" : "Karriere",
+    "jobboerse" : "Job-Börse"
+  },
+  "slider": {
+    "overlay-urlaub": "Urlaub kannst Du noch nehmen",
+    "overlay-tage": "Tage"
+  },
+  "title": {
+    "start" : "Arbeitnehmer Onlineservice"
+  },
+  "footer": {
+    "agb": "AGBs",
+    "agb-link": "assets/pdf/AGBs_DUMMY.PDF",
+    "privacy": "Datenschutz",
+    "privacy-link": "assets/pdf/DATENSCHUTZ_DUMMY.PDF",
+    "impress": "Impressum",
+    "impress-link": "https://www.soka-bau.de/soka-bau/ueber-soka-bau/impressum",
+    "contact": "Kontakt"
+  }
+}

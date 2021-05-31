@@ -1,0 +1,27 @@
+@import "~src/scss/variables";
+
+.svg-centered {
+  @include box-centered;
+}
+
+.svg-small {
+  width: 1.5em;
+}
+
+.svg-menu {
+  height: 21px;
+  width: 21px;
+}
+
+.tile-icon {
+  margin-right: 0.3em;
+}
+
+.tile-dot-icon {
+  color: white;
+}
+
+.svg-label {
+  vertical-align: text-bottom;
+  padding-left: .3rem;
+}

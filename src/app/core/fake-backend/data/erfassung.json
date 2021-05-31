@@ -1,0 +1,36 @@
+{
+  "hinweise": [],
+  "payload": {
+    "instanceId": "abcdef01-0000-0000-0000-abcdef012345",
+    "businessKey": "0815123456789",
+    "taskModel": {
+      "id": "abcdef01-0000-0000-0000-abcdef012345",
+      "formKey": "app:antragsdatenErfassen",
+      "payload": {
+        "uiSections": [
+          "STEUERID",
+          "STEUERPFLT_KONFESSION"
+        ],
+        "action": null
+      }
+    },
+    "payload": [
+      {
+       "benutzername": "Zufall",
+        "anrede": "HERR",
+        "vorname": "Lukas",
+        "name": "Zufall",
+        "email": "lzufall@gmx.de",
+        "mobilnummer": "1751770900",
+        "geburtsdatum": "1984-10-06",
+        "bic": "HYVEDEMM300",
+        "geldinstitut": "UniCredit Bank-HypoVereinsbank",
+        "iban": "DE77200300000043998906",
+        "landId": 24,
+        "ort": "Zufallshausen",
+        "plz": "61350",
+        "strasseUndHausnummer": "Lindenallee 7"
+      }
+    ]
+  }
+}

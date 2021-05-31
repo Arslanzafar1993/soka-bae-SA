@@ -1,0 +1,15 @@
+<div class="toolbar-container">
+  <div class="d-flex align-items-center px-lg-3">
+    <svg class="d-sm-block d-lg-none" id="link-hamburger" xmlns="http://www.w3.org/2000/svg" anosrv-eventbus-director channel="mainNavSidebar" width="19" height="15" viewBox="0 0 14 11">
+      <path d="M1,3H15V6H1ZM1,7H15v3H1Zm0,4H15v3H1Z" transform="translate(-1 -3)" />
+    </svg>
+
+    <svg class="d-none d-lg-block" id="link-hamburger" xmlns="http://www.w3.org/2000/svg" anosrv-eventbus-director channel="mainNavSidebar" width="48" height="38" viewBox="0 0 14 11">
+      <path d="M1,3H15V6H1ZM1,7H15v3H1Zm0,4H15v3H1Z" transform="translate(-1 -3)" />
+    </svg>
+
+    <span class="icon-left" [innerHtml]="insertSVG()"></span>
+    <span class="text">{{ headerText | translate }}</span>
+  </div>
+</div>
+

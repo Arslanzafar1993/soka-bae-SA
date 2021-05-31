@@ -1,0 +1,15 @@
+/*
+This configuration is used by sonar-scanner.
+Since Angular 10 classic tsconfig.json has been migrated to tsconfig.base.json
+*/
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "outDir": "./out-tsc/app",
+    "types": ["jasmine"]
+  },
+  "files": ["main.ts", "polyfills.ts"],
+  "include": ["**/*.ts"]
+}

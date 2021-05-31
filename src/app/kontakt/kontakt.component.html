@@ -1,0 +1,48 @@
+<div class="page-container">
+  <anosrv-hero-image></anosrv-hero-image>
+  <div class="section-container">
+    <div class="section-container mt">
+      <div class="section-header">
+        <span class="icon mt-1" [innerHtml]="iconService.getIcon('phone')"></span>
+        <h2 class="margin-l5">{{ "konkakt.hotline" | translate }}</h2>
+      </div>
+      <div class="section-body">
+        <p> {{ "konkakt.hotline-info" | translate }}
+          <label class="phone-heading">
+            {{ "konkakt.hotline-phone" | translate }}
+          </label>
+        </p>
+        <p style="margin-top:20px;"> {{ "konkakt.hotline-timing" | translate }}
+          <anosrv-button buttonId="button-kontakt" class="button-absolute" 
+            [text]="'konkakt.call-button-text' | translate" iconName="phone" buttonPosition="left"
+            routerLink="/hilfe/urlaub">
+          </anosrv-button>
+        </p>
+      </div>
+    </div>
+    <div class="section-container mt">
+      <div class="section-header">
+        <span class="icon mt-1" [innerHtml]="iconService.getIcon('phone')"></span>
+        <h2 class="margin-l5">{{ "konkakt.email-title" | translate }}</h2>
+      </div>
+      <div class="section-body">
+        <p> {{ "konkakt.email-info" | translate }}
+        </p>
+        <p style="margin-top:20px;"> {{ "konkakt.hotline-email" | translate }}
+        </p>
+      </div>
+    </div>
+    <div class="section-container mt">
+      <div class="section-header">
+        <span class="icon mt-1" [innerHtml]="iconService.getIcon('soka')"></span>
+        <h2 class="margin-l5">{{ "konkakt.address-title" | translate }}</h2>
+      </div>
+      <div class="section-body">
+        <p> {{ "konkakt.address1" | translate }}</p>
+        <p> {{ "konkakt.address2" | translate }}</p>
+        <p> {{ "konkakt.address3" | translate }}</p>
+      </div>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

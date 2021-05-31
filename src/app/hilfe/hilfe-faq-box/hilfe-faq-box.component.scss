@@ -1,0 +1,73 @@
+@import "../../../scss/_variables";
+
+$color-faq-header: #d9d9d9;
+
+.faq-container {
+  margin: 28px 0 0 0;
+}
+
+.faq-body {
+  background: $color-bg-blueish;
+  overflow: hidden;
+  max-height: 600px;
+  transition: max-height .6s;
+
+  .faq-body-content {
+    padding: 10px;
+  }
+
+  &.hidden {
+    max-height: 0px;
+  }
+}
+
+.faq-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+
+  min-height: 30px;
+  border: 1px solid $color-faq-header;
+  background: $color-faq-header;
+
+  .icon{
+    position: relative;
+    flex: 0 0 auto;
+    width: 28px;
+
+    .icon-overlay{
+      display: block;
+      position: absolute;
+      z-index: 1;
+      width: 28px;
+      height: 28px;
+    }
+
+    .white {
+      background: $color-white;
+    }
+
+    .icon-svg {
+      display: block;
+      position: absolute;
+      top: 50%;
+      height: 28px;
+      width: 28px;
+      margin-top: -14px;
+    }
+
+    &-right {
+      .icon-svg {
+        height: 13px;
+        padding: 0 8px;
+        margin-top: -10px;
+      }
+    }
+  }
+
+  .title {
+    flex: 1 1 auto;
+    vertical-align: middle;
+    padding: 5px 10px;
+  }
+}

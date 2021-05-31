@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="border-top d-lg-block"></div>
+  <anosrv-slider class="d-block dummy-container"></anosrv-slider>
+  <div class="border d-sm-none"></div>
+  <div class="border-bottom d-lg-block"></div>
+
+  <div class="start-container">
+    <div class="grid-container">
+      <a id="link-urlaub" routerLink="/urlaub">
+        <anosrv-tile
+          id="urlaub"
+          [showAlertIcon]="false"
+          backgroundImage="urlaub.png"
+          backgroundImageDesktop="urlaub-gross.jpg"
+          svgIcon="SOKA-Icon-Leistungen"
+          [text]="'start.urlaub' | translate"
+          [showInfoLayer]="false">
+          <p>
+            {{ 'start.urlaubsanspruch' | translate:urlaubsTageParam }}
+          </p>
+          <p>
+            {{ 'start.guthaben' | translate:verfallTageParam }}
+          </p>
+        </anosrv-tile>
+      </a>
+
+      <anosrv-tile
+        id="rente"
+        backgroundImage="rente.png"
+        backgroundImageDesktop="rente.png"
+        svgIcon="SOKA-Icon-Rentenverfahren"
+        [text]="'start.rente' | translate"
+        [masked]="true">
+      </anosrv-tile>
+
+      <a id="link-urlaub" routerLink="/hilfe">
+        <anosrv-tile
+          id="info"
+          backgroundImage="info.png"
+          backgroundImageDesktop="info.png"
+          svgIcon="266-question"
+          [text]="'start.info' | translate">
+        </anosrv-tile>
+      </a>
+
+      <anosrv-tile
+        id="postfach"
+        backgroundImage="postfach.png"
+        backgroundImageDesktop="postfach.png"
+        svgIcon="070-envelop"
+        [text]="'start.postfach' | translate"
+        [masked]="true">
+      </anosrv-tile>
+    </div>
+  </div>
+</div>

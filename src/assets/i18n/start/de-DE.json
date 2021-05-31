@@ -1,0 +1,6 @@
+{
+  "start": {
+    "urlaubsanspruch": "Dein Urlaubsanspruch beträgt {{ tage }} Tage.",
+    "guthaben": "Dein Guthaben verfällt in {{ tage }} Tagen."
+  }
+}

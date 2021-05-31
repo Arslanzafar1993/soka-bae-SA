@@ -1,0 +1,10 @@
+<header>
+  <div class="header-container px-lg-3">
+    <a id="header-link-home" class="d-block flex-grow-1" routerLink="/home" role="link">
+      <img class="logo d-sm-none" src="assets/images/logo.png" alt="SokaBau Logo" />
+      <img class="d-none d-lg-block" src="assets/images/logo_schrift.png" alt="SokaBau Logo" />
+    </a>
+    <span class="icon d-none d-lg-block px-6" [innerHtml]="iconService.getIcon('glocke')"></span>
+    <anosrv-profile class="px-lg-4"></anosrv-profile>
+  </div>
+</header>

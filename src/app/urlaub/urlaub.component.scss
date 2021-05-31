@@ -1,0 +1,532 @@
+@import "../../scss/_variables";
+
+.container {
+  background-color: $color-bg;
+  min-height: $page-min-height-mobil;
+  padding-bottom: 24px;
+}
+
+.button-absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.button-absolute-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.button-absolute-bottom {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+}
+
+.urlaub-container {
+  background-color: white;
+  position: relative;
+}
+
+.container-urlaub-hinweis {
+  p {
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 6px;
+  }
+  
+  p.normal {
+    font-weight: normal;
+  }
+}
+.urlaub-container h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: $color-text;
+}
+
+.urlaub-container-body {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.guthaben-h3 {
+  padding: 12px;
+  font-weight: bold;
+  color: $color-text;
+  font-size: 12px;
+}
+
+.urlaub-container-ende {
+  padding: 12px;
+  background-color: $color-bg-greenish;
+
+  p {
+    font-size: 12px;
+    color: $color-text;
+  }
+
+  li {
+    list-style-position: outside;
+    margin-left: 15px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $color-text;
+  }
+
+  .guthaben {
+    padding: 10px 0 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: $color-text;
+  }
+}
+
+.urlaub-container-header {
+  display: flex;
+  height: 31px;
+  align-items: center;
+  padding: 5px 9px;
+  border-bottom: 1px solid $color-border;
+  border-top: 1px solid $color-border;
+}
+
+.urlaub-container-days {
+  font-size: 24px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.urlaub-container-text {
+  font-size: 12px;
+  flex-grow: 1;
+}
+
+.urlaub-container-hr {
+  padding-right: 0;
+  color: $color-text;
+  margin-top: 5px;
+}
+
+.urlaub-guthaben {
+  font-size: 24px;
+  font-weight: bold;
+  align-self: flex-start;
+  padding-top: 10px;
+}
+
+.urlaub-date {
+  color: $color-red;
+  font-weight: bold;
+}
+
+.urlaubsanspruch-summe {
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.urlaubsverguetung-summe {
+  text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+.overlay-text {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.urlaub-detail-container {
+  background-color: white;
+  position: relative;
+}
+
+.urlaub-detail-container h2 {
+  font-size: 15px;
+  font-weight: 400;
+  color: $color-text;
+}
+
+.header-underline {
+  border-bottom: 1px solid $color-border-accent;
+}
+
+.container-urlaub-sum {
+  background-color: $color-bg-accent;
+  padding: 8px;
+  position: relative;
+}
+
+.urlaub-detail-row {
+  display: flex;
+}
+
+.urlaub-detail-row h3 {
+  font-size: 15px;
+  font-weight: bold;
+  flex: 0 0 150px;
+}
+
+.urlaub-detail-row h4 {
+  font-size: 12px;
+  flex: 0 0 150px;
+}
+
+.text {
+  flex: 0 0 150px;
+}
+
+.urlaub-detail-row span {
+  font-size: 9px;
+}
+
+.urlaub-days {
+  font-size: 15px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.urlaub-date-guthaben {
+  font-size: 12px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.urlaub-sum {
+  font-size: 12px;
+  font-weight: bold;
+  flex-grow: 1;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.container-urlaub-hinweis {
+  position: relative;
+  padding: 14px 9px;
+  background-color: white;
+  z-index: 10000;
+}
+
+.z-index-1 {
+  z-index: 1;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  fill: white;
+  cursor: pointer;
+}
+
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+}
+
+.container-jahre-detail {
+  padding: 30px 38px 10px 10px;
+}
+
+.container-jahre-detail h3 {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.container-jahre-detail h4 {
+  font-size: 12px;
+}
+
+.container-jahre-detail .urlaub-days {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.container-jahre-detail .urlaub-sum {
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-grey;
+  padding-bottom: 10px;
+  margin-left: 50px;
+}
+
+.red {
+  color: $color-red;
+}
+
+.regular {
+  font-weight: normal !important;
+}
+
+.background-auszahlung {
+  background-color: rgba(64, 64, 64, 0.84);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.modal-close {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  color: white;
+  cursor: pointer;
+}
+
+.urlaub-auszahlen-container {
+  background-color: $color-bg-blueish;
+  position: relative;
+}
+
+.urlaub-auszahlen-container p {
+  font-size: 12px;
+  line-height: 18px;
+  color:$color-text;
+  padding: 9px 11px;
+}
+
+.urlaub-auszahlen-container .urlaub-auszahlen-question {
+  color: $color-blue;
+  font-size: 12px;
+  padding: 0px 0 8px 11px;
+}
+
+.bg {
+  background-color: $color-light-grey !important;
+}
+
+.bg-green {
+  background-color: $color-bg-greenish !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid $color-border;
+}
+
+.entry {
+  padding: 16px 24px 16px 24px;
+  font-size: 15px;
+  color: $color-icon;
+  background-color: $color-bg-white;
+}
+
+.entry-konfession {
+  padding: 16px 4px 16px 24px;
+}
+
+.entry-first {
+  padding-top: 30px;
+}
+
+.entry-last {
+  padding-bottom: 50px;
+}
+
+.entry-radio {
+  padding: 16px 0 16px 24px;
+  font-size: 15px;
+  color: $color-icon;
+  background-color: white;
+}
+
+.entry-radio-pruefung {
+  padding: 16px 0 16px 0px;
+  font-size: 15px;
+  color: $color-icon;
+  background-color: white;
+}
+
+.entry-inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 40% 60%;
+  border-top: 1px solid $color-border;
+  border-collapse: collapse;
+}
+
+.form-container-dummy {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: 60px;
+}
+
+.zusammenfassung-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 45% 55%;
+  border-top: 1px solid $color-border;
+  border-bottom: 1px solid $color-border;
+}
+
+input[type='input'] {
+  border-color: 1px solid $color-border-dark;
+  height: 21px;
+  padding: 2px;
+  width: 100%;
+}
+
+input[type='radio'] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.radio-label {
+  padding-left: 15px;
+}
+
+.urlaub-auszahlen-h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: $color-bg-white;
+  margin: 66px 0px 0px 5px;
+}
+
+.radio-container {
+  margin-bottom: 10px;
+}
+
+input[type="radio"]:checked+label{
+  font-weight: bold;
+}
+
+.gesamtbetrag {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.currency {
+  flex-grow: 1;
+  padding-left: 5px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.urlaub-auszahlen-container h2 {
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px 0 0 12px;
+}
+
+.fill-green {
+  color: $color-green;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  align-items: center;
+}
+
+li {
+  list-style-position: inside;
+  font-size: 12px;
+  line-height: 14px;
+  color: $color-text;
+}
+
+.question-box {
+  overflow: hidden;
+}
+
+.error-msg {
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.error-msg {
+  color: #D8000C;
+  background-color: #FFBABA;
+}
+
+.konfession-icon {
+  padding-left: 85px;
+  padding-bottom: 0;
+  vertical-align: text-bottom;
+}
+
+.w-85 {
+  min-width: 85% !important;
+}
+
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: $page-min-height-pc
+  }
+
+  .urlaub-container {
+    width: 660px;
+    min-height: 210px;    
+    box-shadow: 0px 3px 6px #00000029;
+    
+    p {
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    
+    p.normal {
+      font-weight: normal;
+    }
+  }
+
+  .urlaub-container-header h2 {
+    font-size: 15px;
+  }
+
+  .urlaub-container-text {
+    font-size: 15px;
+  }
+
+  .urlaub-container-days {
+    font-size: 48px;
+  }
+
+  .urlaub-container-body {
+    height: 170px;
+  }
+
+  .urlaub-guthaben {
+    font-size: 48px;
+  }
+
+  .urlaub-container-header {
+    padding: 20px 9px;
+  }
+}

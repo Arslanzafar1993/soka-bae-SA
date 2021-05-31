@@ -1,0 +1,74 @@
+.user-container {
+  display: grid;
+  position: relative;
+  grid-template-columns: 37% 63%;
+  border-top: 1px solid #CCCCCC;
+}
+
+.bg {
+  background-color: #EBEBEB;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #CCCCCC;
+}
+
+.entry {
+  padding: 16px 24px 16px 24px;
+  font-size: 15px;
+  color: #808080;
+}
+
+.margin-button {
+  margin-bottom: 40px;
+}
+
+.confirm-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #0066A1;
+  margin: 0;
+  border: 0;
+  color: white;
+  padding: 5px 5px 5px 5px;
+}
+
+.save-button:disabled,
+.save-button[disabled] {
+  background-color: #cccccc;
+  color: #666666;
+}
+
+.entry-first {
+  padding-top: 30px;
+}
+
+.entry-last {
+  padding-bottom: 50px;
+}
+
+.question-box {
+  overflow: hidden;
+  background-color: #e3f2fb;
+  padding: 9px 11px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.entry-radio {
+  padding: 16px 0 16px 24px;
+  font-size: 15px;
+  color: #808080;
+  background-color: white;
+}
+
+.radio-container {
+  margin-bottom: 10px;
+}
+
+.button-absolute {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

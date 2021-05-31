@@ -1,0 +1,81 @@
+@import "~src/scss/variables";
+
+.sticky-container {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: $header-z-index;
+}
+
+#main-nav,
+#profile-nav {
+  & > ul {
+    list-style-type: none;
+
+    & > li {
+      font-size: 15px;
+      padding-bottom: 15px;
+    }
+  }
+  & a {
+    text-decoration: none;
+  }
+  & a:visited { 
+    color: $main-text-color;
+  }
+  & a:hover { 
+    color: $main-text-color;
+  }
+  & a:active { 
+    color: $main-text-color;
+  }
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+}
+
+.menu-item-disabled {
+  color: #ccc !important;
+}
+
+.menu-item-top {
+  margin-left: 24px;
+  margin-top: 48px;
+  padding: 0 !important;
+}
+
+.menu-item-first {
+  margin-left: 24px;
+  margin-top: 24px;
+  padding: 0 !important;
+}
+
+.menu-item-top-bottom {
+  margin-bottom: 24px;
+}
+
+.menu-text {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: $main-text-color;
+}
+
+.menu-username {
+  width: 130px;
+}
+
+@media (min-width: 992px) {
+
+  #main-nav,
+  #profile-nav {
+    & > ul {
+
+      & > li {
+        font-size: 24px;
+        padding-bottom: 24px;
+      }
+    }
+  }
+}

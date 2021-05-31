@@ -1,0 +1,9 @@
+<div class="image-container">
+  <div class="d-none d-lg-block top-left-text" *ngIf="topLeftText !== ''">
+    {{ topLeftText }}
+  </div>
+  <div class="overlay" *ngIf="showOverlay">
+    <ng-content></ng-content>
+  </div>
+  <img class="hero-image" [src]="image" />
+</div>

@@ -1,0 +1,155 @@
+<div class="background-auszahlung">
+  <svg class="modal-close" (click)="close()" [routerLink]="actualLink" width="22" height="22" viewBox="0 0 612 612">
+    <g>
+      <polygon
+        points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397
+        306,341.411 576.521,611.397 612,575.997 341.459,306.011"
+      />
+    </g>
+  </svg>
+  <h1 class="urlaub-auszahlen-h1" *ngIf="!editMode">PRÜFUNG</h1>
+  <h1 class="urlaub-auszahlen-h1" *ngIf="editMode">DATENEINGABE</h1>
+</div>
+
+<form [formGroup]="userForm">
+  <div class="urlaub-auszahlen-container margin-t90">
+    <p *ngIf="!editMode">
+      Sind alle Angaben für Deine Auszahlung korrekt? Bitte bestätige, dass alle aufgeführten persönlichen Daten richtig sind.
+      Wenn Du Daten ändern möchtest, dann wähle bitte den Stift.
+      <span class="pen-icon"
+            [innerHtml]="iconService.getIcon('pen', { width: '16px', height: '16px', color: 'black'})"></span>
+    </p>
+
+    <ng-container *ngFor="let container of pruefungView.containers">
+      <div [@slideDownUp] class="question-box" *ngIf="editMode && containerName === container.name">
+        <p>
+          Du möchtest die Daten noch einmal ändern?
+        </p>
+        <ul style="padding-left: 13px; padding-bottom: 10px">
+          <li>Bitte nimm Deine Änderungen vor.</li>
+          <li>Bestätige Deine Eingabe erneut mit "speichern".</li>
+        </ul>
+      </div>
+
+      <div class="form-container">
+        <anosrv-edit-button
+          [semiEditable]="container.isSemiEditable"
+          (click)="edit(container.name)"
+          id="button-edit-{{ container.name }}"
+          *ngIf="container.name !== containerName">
+        </anosrv-edit-button>
+
+        <ng-container *ngFor="let item of container.items; let i = index; let last = last">
+          <div class="entry bg d-flex justify-content-start align-items-center"
+               [class.entry-first]="i == 0"
+               [class.entry-last]="last && editMode && containerName === container.name">
+            {{ item.label }}
+          </div>
+
+          <div class="entry"
+               [class.entry-last]="last"
+               [class.entry-konfession]="item.editable && item.controlType === 'radio'"
+               *ngIf="editMode && containerName === container.name && item.editable">
+
+            <div class="entry-inputs"
+                 *ngIf="item.editable && item.controlType === 'input'">
+              <anosrv-error
+                [inputId]="item.formControlName"
+                [hinweise]="hinweise">
+              </anosrv-error>
+
+              <anosrv-input
+                [form]="userForm"
+                [controlName]="item.formControlName"
+                [maxLength]="item.maxLength">
+              </anosrv-input>
+            </div>
+
+            <div class="entry-inputs" *ngIf="item.editable && item.controlType === 'searchSelect'">
+              <anosrv-error
+                [inputId]="item.formControlName"
+                [hinweise]="hinweise">
+              </anosrv-error>
+
+              <ng-select *ngIf="item.editable && item.controlType === 'searchSelect'"
+                [id]="item.formControlName"
+                [items]="item.selectData.data"
+                [selectOnTab]="true"
+                bindValue="portalId"
+                bindLabel="name"
+                labelForId="portalId"
+                placeholder="Wählen Sie ein Land"
+                [formControlName]="item.formControlName">
+              </ng-select>
+            </div>
+
+            <div class="entry-radio-pruefung" *ngIf="item.editable && item.controlType === 'radio'">
+              <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+              <div class="radio-container">
+                <input type="radio" id="evangelisch" value="EVANGELISCH" [formControlName]="item.formControlName">
+                <label class="radio-label" for="evangelisch">evangelisch</label>
+              </div>
+
+              <div class="radio-container">
+                <input type="radio" id="katholisch" value="KATHOLISCH" [formControlName]="item.formControlName">
+                <label class="radio-label" for="katholisch">römisch-katholisch</label>
+              </div>
+
+              <div class="radio-container">
+                <input type="radio" id="none" value="KEINE" [formControlName]="item.formControlName">
+                <label class="radio-label" for="none">nicht kirchensteuerpflichtig</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry"
+               [class.entry-first]="i == 0"
+               *ngIf="displayDataReadOnly(item, container)">
+            <div class="icon-container">
+              <span class="flex-grow-1">
+                {{ dropdownService.displayValue(item) }}
+              </span>
+              <anosrv-info-i *ngIf="item.modalId" [name]="item.modalId"></anosrv-info-i>
+            </div>
+          </div>
+
+        </ng-container>
+        <anosrv-button
+          buttonId="button-{{containerName}}-save"
+          class="button-absolute"
+          iconName="check"
+          text="speichern"
+          (click)="save(containerName)"
+          *ngIf="editMode && containerName === container.name">
+        </anosrv-button>
+      </div>
+    </ng-container>
+
+    <div class="form-container-dummy">
+      <div class="entry bg"></div>
+      <div class="entry padding-l40"></div>
+    </div>
+
+    <anosrv-button
+      buttonId="button-bestaetigen"
+      *ngIf="!editMode"
+      class="button-absolute"
+      iconName="check"
+      (click)="next()"
+      text="bestätigen">
+    </anosrv-button>
+  </div>
+</form>
+
+<anosrv-app-modal modalId="steuerID">
+  <ul>
+    <li>Die Steuer-Identifikationsnummer (Steuer-ID) ändert sich nicht. </li>
+    <li>Deshalb kann die Steuer-ID von Dir nicht geändert werden.</li>
+    <li>Ist das nicht Deine Steuer-ID, so rufe bitte die SOKA-BAU Arbeitnehmer Hotline an.*</li>
+    <li>Bitte in diesem Fall die Auszahlung des Guthabens abbrechen.</li>
+
+    <span class="details">detaillierte Information findest Du unter
+      <a class="link" href="www.soka-bau.de">www.soka-bau.de/hier den Link auf die Telefonnummern Arbeitnehmer</a>
+    </span>
+  </ul>
+</anosrv-app-modal>

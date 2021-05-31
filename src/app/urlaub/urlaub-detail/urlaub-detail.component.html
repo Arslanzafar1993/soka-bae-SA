@@ -1,0 +1,96 @@
+<div class="container px-0">
+  <anosrv-urlaub-guthaben-overlay [topLeftText]="'urlaub.top-left-text' | translate"></anosrv-urlaub-guthaben-overlay>
+
+  <div class="urlaub-container mt-lg-3">
+    <div class="urlaub-container-header">
+      <span 
+        class="d-none d-lg-block" 
+        [innerHtml]="iconService.getIcon('sonnenschirm', { width: '21.377px', height: '21.017px' })">
+      </span>
+      <h1>
+        {{ 'urlaub.urlaubsanspruch' | translate }} {{ anspruchHeader() }}
+      </h1>
+    </div>
+
+    <div class="urlaub-container-hinweise" [class.z-index-1]="!showBackdrop">
+      <svg class="modal-close" *ngIf="!showBackdrop" routerLink="/urlaub" width="15" height="15" viewBox="0 0 612 612">
+        <g>
+          <polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397
+            306,341.411 576.521,611.397 612,575.997 341.459,306.011"/>
+        </g>
+      </svg>
+  
+      <svg class="modal-close" *ngIf="showBackdrop" (click)="showBackdrop = !showBackdrop" width="15" height="15" viewBox="0 0 612 612">
+        <g>
+          <polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397
+            306,341.411 576.521,611.397 612,575.997 341.459,306.011"/>
+        </g>
+      </svg>
+  
+      <p [class.normal]="!showBackdrop" *ngFor="let text of hinweise">{{ text }}</p>
+    </div>    
+  </div>
+
+  <div class="urlaub-container-details">
+    <div class="urlaub-detail-row">
+      <h3 class="detail">
+        {{ 'urlaub.headers.h3' | translate }}
+      </h3>
+
+      <span class="d-lg-none urlaub-detail-row__info">
+        <anosrv-info-i class="d-flex justify-content-center" name="urlaubstageModal" variant="mobile"></anosrv-info-i>
+      </span>
+
+      <span class="d-none d-lg-block urlaub-detail-row__info order-lg-3">
+        <anosrv-info-i class="d-flex justify-content-center" name="urlaubstageModal" variant="desktop"></anosrv-info-i>
+      </span>      
+      
+      <div class="daten urlaub-tage urlaub-tage-detail">
+        {{ 'urlaub.urlaubstage_tage' | translate:urlaubTageGerundet }}
+      </div>
+    </div>
+
+    <div class="urlaub-detail-row margin-top">
+      <h4>
+        {{ 'urlaub.headers.h4' | translate }}
+      </h4>
+
+      <span class="d-lg-none urlaub-detail-row__info">
+        <anosrv-info-i class="d-flex justify-content-center" name="urlaubVerguetungModal" variant="mobile"></anosrv-info-i>
+      </span>
+
+      <span class="d-none d-lg-block urlaub-detail-row__info order-lg-3">
+        <anosrv-info-i class="d-flex justify-content-center" name="urlaubVerguetungModal" variant="desktop"></anosrv-info-i>
+      </span>
+
+      <div class="daten urlaub-summe">
+        {{ userStoreService.user.value.urlaubsGuthabenGesamt | currency:'EUR'}}
+      </div>
+    </div>
+
+    <div class="urlaub-detail-row margin-top mb-5">
+      <span class="text text-details">
+        {{ 'urlaub.referenzdatum' | translate }} {{ userStoreService.user.value.referenzDatum | date:'LLL yyyy'}}
+      </span>
+
+      <span class="d-lg-none urlaub-detail-row__info">
+        <anosrv-info-i class="d-flex justify-content-center" name="dataModal" variant="mobile"></anosrv-info-i>
+      </span>
+
+      <span class="d-none d-lg-block urlaub-detail-row__info order-lg-3">
+        <anosrv-info-i class="d-flex justify-content-center" name="dataModal" variant="desktop"></anosrv-info-i>
+      </span>
+    </div>
+
+    <anosrv-button
+      buttonId="button-urlaub-details"
+      class="button-absolute-bottom"
+      iconName="chevron-right"
+      buttonPosition="right"
+      routerLink="/urlaub/detail/jahre"
+      [text]="'urlaub.buttons.details' | translate">
+    </anosrv-button>
+  </div>
+</div>
+
+<div [@dialog] class="modal-mask" *ngIf="showBackdrop"></div>

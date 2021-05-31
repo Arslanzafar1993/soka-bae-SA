@@ -1,0 +1,24 @@
+<div class="container px-0">
+  <anosrv-urlaub-guthaben-overlay [showOverlay]="false"></anosrv-urlaub-guthaben-overlay>
+
+  <div class="urlaub-container">
+    <div class="urlaub-container-header">
+      <h2 style="padding-left: 5px">Guthaben aus 2018</h2>
+    </div>
+
+    <h3 class="guthaben-h3">Aktuell sind keine weiteren Guthaben vorhanden</h3>
+    
+    <div class="urlaub-container-ende">
+      <p>Dein Antrag auf Auszahlung Deines Guthabens von</p>
+      <p class="guthaben">{{ userStoreService.user.value.netto | currency:'EUR' }}</p>
+      <p class="margin-b10">ist bei uns eingegangen.</p>
+      <ul>
+        <li>Du erhältst in Kürze noch eine Bestätigung per E-Mail, dass Dein Antrag bei uns eingegangen ist.</li>
+        <li>Die Bearbeitung Deiner Auszahlung kann bis zu 3 Wochen dauern.</li>
+        <li>Bitte habe etwas Geduld bis das Geld auf Deinem Konto ist.</li>
+        <li>Haben wir Dein Guthaben ausgezahlt, erhältst du von uns eine Bestätigung per E-Mail.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>

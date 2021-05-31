@@ -1,0 +1,22 @@
+.info-i {
+  position: relative;
+  display: inline-block;
+  
+  .overlay{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+// Desktop
+@media (min-width: 992px) {
+  .info-i {    
+    .overlay{
+      width: 21px;
+      height: 21px;
+    }
+  }
+}

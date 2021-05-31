@@ -1,0 +1,49 @@
+{
+  "hinweise": [],
+  "payload": {
+    "urlaubModelList": [
+      {
+        "wert": 26742.08,
+        "abzuege": 0,
+        "netto": 26742.08,
+        "tage": 69.03,
+        "tageGerundet": 69,
+        "referenzDatum": "2020-09-30"
+      },
+      {
+        "jahr": 2021,
+        "wert": 7277.54,
+        "abzuege": 0,
+        "netto": 7277.54,
+        "tage": 17.5,
+        "tageGerundet": 17,
+        "referenzDatum": "2020-09-30"
+      },
+      {
+        "jahr": 2020,
+        "wert": 12512.59,
+        "abzuege": 0,
+        "netto": 12512.59,
+        "tage": 30,
+        "tageGerundet": 30,
+        "referenzDatum": "2020-09-30"
+      },
+      {
+        "jahr": 2019,
+        "wert": 6951.95,
+        "abzuege": 0,
+        "netto": 6951.95,
+        "tage": 21.53,
+        "tageGerundet": 22,
+        "referenzDatum": "2020-09-30"
+      },
+      {
+        "jahr": 2019,
+        "wert": 1222.27,
+        "abzuege": 257.9,
+        "netto": 964.37,
+        "entschaedigbar": true
+      }
+    ]
+  }
+}

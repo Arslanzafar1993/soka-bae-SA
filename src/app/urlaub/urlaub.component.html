@@ -1,0 +1,44 @@
+<div class="container px-0">
+  <anosrv-urlaub-guthaben-overlay></anosrv-urlaub-guthaben-overlay>
+
+  <div class="urlaub-container mt-3">
+    <div class="urlaub-container-header">
+      <span [innerHtml]="iconService.getIcon('sonnenschirm', { width: '21.377px', height: '21.017px' })"></span>
+      <h2 style="padding-left: 5px">Urlaubsanspruch {{ anspruchHeader() }}</h2>
+    </div>
+
+    <div class="urlaub-container-body">
+      <span class="urlaub-container-days">{{ userStoreService.user.value.urlaubTageGerundet }}</span> <span class="urlaub-container-text">Tage Urlaub kannst Du noch nehmen.</span>
+    </div>
+
+    <anosrv-button buttonId="button-urlaub-detail" class="button-absolute" text="Details" routerLink="/urlaub/detail"></anosrv-button>
+  </div>
+
+  <div class="urlaub-container mt-3">
+    <div class="urlaub-container-header">
+      <span class="icon" [innerHtml]="iconService.getIcon('money')"></span>
+      <h2>Guthaben aus {{ userStoreService.user.value.guthabenJahr }}</h2>
+    </div>
+
+    <div class="urlaub-container-body">
+      <p class="urlaub-container-text">
+        Du hast aus {{ userStoreService.user.value.guthabenJahr }} ein Guthaben:<br/><br/>
+        Hol Dir dein Guthaben bis zum <span class="urlaub-date">{{ userStoreService.user.value.verfallDatum | date:'dd.MM.yyyy' }}!</span>
+      </p>
+
+      <div class="urlaub-guthaben">
+        {{ userStoreService.user.value.guthaben | currency:'EUR' }}
+      </div>
+    </div>
+
+    <anosrv-button
+      buttonId="button-urlaub-beantragen"
+      class="button-absolute"
+      routerLink="/urlaub/guthaben"
+      smallText="true"
+      text="zum Antrag"
+      iconName="chevron-right"
+      buttonPosition="right">
+    </anosrv-button>
+  </div>
+</div>

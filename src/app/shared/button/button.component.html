@@ -1,0 +1,10 @@
+<button [id]="buttonId" class="button" [disabled]="buttonDisable" [class.smallText]="smallText">
+  <a [href]="href" [target]="hrefTarget" *ngIf="href.length > 0; else contentBlock">
+    <ng-container *ngTemplateOutlet="contentBlock"></ng-container>
+  </a>
+  <ng-template #contentBlock>
+    <span *ngIf="iconName && buttonPosition === 'left'" class="icon" [innerHtml]="insertSVG()"></span>
+    {{ text }}
+    <span *ngIf="iconName && buttonPosition === 'right'" class="icon icon-right" [innerHtml]="insertSVG()"></span>
+  </ng-template>
+</button>

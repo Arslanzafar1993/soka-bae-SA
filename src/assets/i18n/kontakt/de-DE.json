@@ -1,0 +1,20 @@
+{
+    "konkakt": {
+        "title": "konkakt",
+        "hotline": "Hotline",
+        "hotline-info": "Wir sind gerne für Dich da.",
+        "hotline-phone": "0800 1000881",
+        "hotline-timing":"(kostenfrei, MO-FR 7:00 Uhr bis 17:00 Uhr) ",
+        "call-button-text":"anrufen",
+
+        "email-title": "Email",
+        "email-info": "Per Mail erreichst Du uns unter:",
+        "hotline-email": "arbeitnehmer@soka-bau.de",
+
+        "address-title": "Adresse",
+        "address1": "SOKA-BAU",
+        "address2": "Wettinerstraße 7",
+        "address3": "65189 Wiesbaden"
+    }
+  }
+  

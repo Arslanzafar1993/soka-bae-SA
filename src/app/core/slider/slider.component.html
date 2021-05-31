@@ -1,0 +1,55 @@
+<div class="navigation-wrapper">
+  <div class="keen-slider keen-slider--vertical" #sliderRef>
+    <div
+      class="keen-slider__slide"
+      [class.side-slide]="currentSlide !== 0"
+    >
+      <img src="assets/images/gewan-gross.jpg" class="silder-image" alt="to be defined" />
+    </div>
+
+    <div
+      class="keen-slider__slide"
+      [class.side-slide]="currentSlide !== 1"
+    >
+      <div (click)="route()" class="overlay">
+        <p class="overlay-text-header">{{ userStoreService.user.value.urlaubTageGerundet }} {{ "slider.overlay-tage" | translate }}</p>
+        <p class="overlay-text">{{ "slider.overlay-urlaub" | translate }}</p>
+      </div>
+      <img src="assets/images/urlaub-gross.jpg" class="silder-image" alt="to be defined" />
+    </div>
+
+    <div
+      class="keen-slider__slide"
+      [class.side-slide]="currentSlide !== 2"
+    >
+      <img src="assets/images/autobahn.jpg" class="silder-image" alt="to be defined" />
+    </div>
+
+    <div
+      class="keen-slider__slide"
+      [class.side-slide]="currentSlide !== 3"
+    >
+      <img src="assets/images/mail-gross.jpg" class="silder-image" alt="to be defined" />
+    </div>
+
+    <ng-container>
+      <div class="arrow arrow--left" (click)="prev()">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+        </svg>
+      </div>
+
+      <div class="arrow arrow--right" (click)="next()">
+        <svg *ngIf="slider" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+        </svg>
+      </div>
+    </ng-container>    
+  </div>
+</div>
+
+<anosrv-progessbar
+  *ngIf="slider"
+  [totalElements]="slider.details().size"
+  [currentElement]="currentSlide"
+></anosrv-progessbar>

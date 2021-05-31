@@ -1,0 +1,39 @@
+@import '../../../scss/_variables';
+
+.button {
+  background-color: $color-blue;
+  border: 0;
+  padding: 4px 12px;
+  color: white;
+  font-family: "PT Sans";
+  font-size: 15px;
+  font-weight: bold;
+
+  &.smallText {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+
+  a:link, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+  }
+
+  span.icon {
+    color: white;
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    vertical-align:middle;
+    margin-right: 4px;
+  }
+
+  span.icon-right {
+    margin-left: 4px;
+    margin-right: 0px;
+  }
+}

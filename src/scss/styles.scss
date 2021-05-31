@@ -1,0 +1,138 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "PT Sans", sans-serif;
+  height: 100%;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit; // all elements inherit from their parents, 3rd party elements can be redefined to content-box if necessary
+  margin: 0;
+  padding: 0;
+}
+
+.margin-t40 {
+  margin-top: 40px;
+}
+
+.margin-t60 {
+  margin-top: 60px;
+}
+
+.margin-t90 {
+  margin-top: 90px;
+}
+
+.margin-t30 {
+  margin-top: 30px;
+}
+
+.margin-t10 {
+  margin-top: 10px;
+}
+
+.margin-t5 {
+  margin-top: 5px;
+}
+
+.margin-b40 {
+  margin-bottom: 40px;
+}
+
+.margin-b30 {
+  margin-bottom: 30px;
+}
+
+.margin-b30 {
+  margin-bottom: 30px;
+}
+
+.margin-b10 {
+  margin-bottom: 10px;
+}
+
+.margin-b5 {
+  margin-bottom: 5px;
+}
+
+.margin-r10 {
+  margin-right: 10px;
+}
+
+.margin-l5 {
+  margin-left: 5px;
+}
+
+.margin-l10 {
+  margin-left: 10px;
+}
+
+.margin-l20 {
+  margin-left: 20px;
+}
+
+.margin-l30 {
+  margin-left: 30px;
+}
+
+.padding-l10 {
+  padding-left: 10px;
+}
+
+.padding-l20 {
+  padding-left: 20px;
+}
+
+.padding-l30 {
+  padding-left: 30px;
+}
+
+.padding-l40 {
+  padding-left: 40px !important;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.save-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #0066a1;
+  margin: 0;
+  border: 0;
+  color: white;
+  padding: 5px 40px 5px 40px;
+}
+
+.cancel-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #0066a1;
+  margin: 0;
+  border: 0;
+  color: white;
+  padding: 5px 40px 5px 40px;
+}
+
+.weight-normal {
+  font-weight: normal !important;
+}
+
+@media (min-width: 992px) {
+  body {
+    background-color: #ebebeb;
+  }
+  
+  .keen-slider {
+    overflow: unset !important;
+  }
+}

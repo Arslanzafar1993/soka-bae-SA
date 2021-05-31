@@ -1,0 +1,21 @@
+@import "../../../scss/_variables";
+
+p:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+ul {
+  list-style-type: initial;
+  list-style-position: initial;
+  padding: 0 0 0 20px;
+
+  li {
+    display: list-item;
+  }
+}
+
+a:link, a:visited, a:hover, a:active {
+  color: $color-blue;
+  text-decoration: none;
+}
+

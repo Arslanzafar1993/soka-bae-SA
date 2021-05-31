@@ -1,0 +1,11 @@
+<anosrv-hero-image [showOverlay]="showOverlay" [topLeftText]="topLeftText">
+  <p class="urlaubsanspruch-summe">
+    {{ userStoreService.user.value.guthaben | currency:'EUR' }}
+  </p>
+  <p class="overlay-text">
+    {{ 'urlaub.overlay.verfalldatum' | translate }} {{ userStoreService.user.value.verfallDatum | date:'dd.MM.yyyy' }}
+  </p>
+  <p class="overlay-text">
+    {{ 'urlaub.overlay.guthaben' | translate }} {{ userStoreService.user.value.guthabenJahr }}
+  </p>
+</anosrv-hero-image>

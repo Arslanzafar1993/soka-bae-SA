@@ -1,0 +1,56 @@
+<div class="page-container">
+  <div class="login-container">
+    <p *ngFor="let text of intro">{{text}}</p>
+    <ul>
+      <li *ngFor="let text of points">{{text}}</li>
+    </ul>
+
+    <form class="login-grid" action="none" (submit)="preventDefault">
+      <div>
+        <label for="input-arbeitnehmernr">{{ 'login.nutzer' | translate }}</label>
+      </div>
+      <div>
+        <input type="text"
+               name="username"
+               id="input-arbeitnehmernr"
+               [(ngModel)]="username"
+               (ngModelChange)="onChange()"
+               (keyup.enter)="login(arbeitNehmerNrInput.value)"
+               #arbeitNehmerNrInput />
+        <a id="modal-benutzername"
+           (click)="modalService.open('loginModal')">{{ 'login.vergessen.nutzer' | translate }}</a>
+      </div>
+
+      <div>
+        <label for="input-password">{{ 'login.passwort' | translate }}</label>
+      </div>
+      <div>
+        <input type="password"
+               name="password"
+               id="input-password"
+               [(ngModel)]="password"
+               (ngModelChange)="onChange()"/>
+        <a id="modal-passwort-vergessen"
+           (click)="modalService.open('loginModal')">{{ 'login.vergessen.passwort' | translate }}</a>
+      </div>
+      <anosrv-button
+        class="button-absolute"
+        buttonId="button-anmelden"
+        iconName="login"
+        [buttonDisable]="buttonDisabled"
+        [text]="'login.anmelden' | translate"
+        (click)="login(arbeitNehmerNrInput.value)"></anosrv-button>
+    </form>
+  </div>
+</div>
+
+<anosrv-app-modal modalId="loginModal" [title]="title">
+  <h4 style="margin-bottom: 10px">{{ 'login.hilfe.title' | translate }}</h4>
+  <p *ngFor="let text of help">{{text}}</p>
+  <anosrv-button
+    buttonId="button-telefon"
+    class="button-absolute"
+    iconName="phone"
+    [href]="'hilfe.hotline-tel-link' | translate"
+    [text]="'hilfe.hotline-nummer' | translate"></anosrv-button>
+</anosrv-app-modal>

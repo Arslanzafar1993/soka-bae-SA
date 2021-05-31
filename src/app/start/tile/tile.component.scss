@@ -1,0 +1,73 @@
+@import "../../../scss/_variables";
+
+.tile {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 132px;
+  width: 132px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+
+  &-text {
+    height: 25px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.masked {
+  opacity: 0.5;
+}
+
+@media (min-width: 992px) {
+  .tile {
+    width: 330px;
+    height: 240px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+
+    &-text {
+      height: 36px;
+      font-size: 24px;
+      color: $color-text;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 12px;
+    }
+
+    &-up {
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+      height: 60%;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &-down {
+      display: flex;
+      flex-direction: column;
+      height: 40%;
+    }
+
+    &:hover {
+      box-shadow: none;
+    }
+  }
+
+  :host ::ng-deep {
+    p {
+      font-size: 15px;
+      padding-left: 15px;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      border-bottom: 2px solid #D9D9D9;
+    }
+  }
+}

@@ -1,0 +1,231 @@
+<div class="background-auszahlung">
+  <svg class="modal-close" routerLink="/urlaub/guthaben" width="22" height="22" viewBox="0 0 612 612">
+    <g>
+      <polygon
+        points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397
+        306,341.411 576.521,611.397 612,575.997 341.459,306.011"
+      />
+    </g>
+  </svg>
+  <h1 class="urlaub-auszahlen-h1">DATENEINGABE</h1>
+</div>
+
+<form [formGroup]="userForm">
+  <div class="urlaub-auszahlen-container margin-t90">
+    <p>
+      Für die gewünschte Auszahlung Deines Guthabens benötigen wir einige Angaben.
+      Bitte trage die fehlenden Daten ein, da sonst eine Auszahlung nicht möglich ist.
+    </p>
+
+    <hr />
+    <ng-container *ngIf="auszahlungView.showAddressContainer">
+      <p>
+        Bitte gib Deine Adresse ein, damit Du unsere Briefe auch erhältst.
+      </p>
+
+      <p class="urlaub-auszahlen-question">
+        Wieso brauchen wir Deine Adresse?
+        <anosrv-info-i class="px-1 align-top" name="addressModal"></anosrv-info-i>
+      </p>
+
+      <div class="form-container">
+        <ng-container *ngFor="let item of getContainerByName('address').items; let i = index; let last = last">
+          <div class="entry bg d-flex justify-content-start align-items-center">
+            {{ item.label }}
+          </div>
+
+          <div class="entry">
+            <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+            <anosrv-input
+              [form]="userForm"
+              [controlName]="item.formControlName"
+              [maxLength]="item.maxLength"
+              *ngIf="item.controlType === 'input' && item.editable"
+            ></anosrv-input>
+
+            <div class="entry" [ngClass]="{'ps-0 w-85' : !item.editable}" *ngIf="!item.editable">
+              {{ dropdownService.displayValue(item) }}
+            </div>
+
+            <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+            <select [formControlName]="item.formControlName" *ngIf="item.controlType === 'select'" [id]="item.formControlName">
+              <option *ngFor="let data of item.selectData.data" [value]="data.value">
+                {{ data.label }}
+              </option>
+            </select>
+
+            <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+            <ng-select *ngIf="item.controlType === 'searchSelect'" [id]="item.formControlName" [items]="item.selectData.data"
+              [selectOnTab]="true"
+              bindValue="portalId"
+              bindLabel="name"
+              labelForId="portalId"
+              placeholder="Wählen Sie ein Land"
+              [formControlName]="item.formControlName">
+            </ng-select>
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="auszahlungView.showBankContainer">
+      <div class="urlaub-auszahlen-container">
+        <p>
+          Bitte gib Deine Bankverbindung an.
+        </p>
+
+        <p class="urlaub-auszahlen-question">
+          Wieso brauchen wir Deine Bankverbindung?
+          <anosrv-info-i class="px-1 align-top" name="bankModal"></anosrv-info-i>
+        </p>
+
+        <div class="form-container">
+          <ng-container *ngFor="let item of getContainerByName('bank').items">
+            <div class="entry bg d-flex justify-content-start align-items-center">
+              {{ item.label }}
+              <anosrv-info-i *ngIf="item.info" [name]="item.info"></anosrv-info-i>
+            </div>
+
+            <div class="entry">
+              <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+              <anosrv-input
+                  [form]="userForm"
+                  [controlName]="item.formControlName"
+                  [maxLength]="item.maxLength"
+                ></anosrv-input>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="auszahlungView.showTaxContainer">
+      <div class="urlaub-auszahlen-container">
+        <p>
+          Bitte gib Deine Steueridentifikationsnummer (Steuer-ID) ein.
+        </p>
+
+        <p class="urlaub-auszahlen-question">
+          Wieso brauchen wir Deine Steuer-ID, wie sieht diese aus und wo findest Du diese?
+          <anosrv-info-i class="px-1 align-top" name="steuerIDModalLong"></anosrv-info-i>
+        </p>
+
+        <div class="form-container">
+          <ng-container *ngFor="let item of getContainerByName('tax').items">
+            <div class="entry bg d-flex justify-content-between align-items-center">
+              <span>
+                {{ item.label }}
+              </span>
+              <anosrv-info-i *ngIf="item.info" [name]="item.info"></anosrv-info-i>
+            </div>
+
+            <div class="entry">
+              <div class="entry-inputs">
+                <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+                <anosrv-input
+                  [form]="userForm"
+                  [controlName]="item.formControlName"
+                  [maxLength]="item.maxLength"
+                ></anosrv-input>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="auszahlungView.showKonfessionContainer">
+      <div class="urlaub-auszahlen-container">
+        <p>
+          Zahlst Du evangelische oder katholische Kirchensteuer? Bitte zutreffendes ankreuzen.
+        </p>
+
+        <p class="urlaub-auszahlen-question">
+          Wieso benötigen wir diese Information?
+          <anosrv-info-i class="px-1 align-top" name="konfessionModal"></anosrv-info-i>
+        </p>
+
+        <div class="form-container">
+          <ng-container *ngFor="let item of getContainerByName('konfession').items">
+            <div class="entry bg d-flex justify-content-start align-items-center">
+              {{ item.label }}
+              <anosrv-info-i *ngIf="item.info" [name]="item.info"></anosrv-info-i>
+            </div>
+
+            <div class="entry-radio">
+              <anosrv-error [inputId]="item.formControlName" [hinweise]="hinweise"></anosrv-error>
+              <div class="radio-container">
+                <input type="radio" id="evangelisch" value="EVANGELISCH" [formControlName]="item.formControlName">
+                <label class="radio-label" for="evangelisch">evangelisch</label>
+              </div>
+
+              <div class="radio-container">
+                <input type="radio" id="katholisch" value="KATHOLISCH" [formControlName]="item.formControlName">
+                <label class="radio-label" for="katholisch">römisch-katholisch</label>
+              </div>
+
+              <div class="radio-container">
+                <input type="radio" id="none" value="KEINE" [formControlName]="item.formControlName">
+                <label class="radio-label" for="none">nicht kirchensteuerpflichtig</label>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </ng-container>
+
+    <div class="form-container-dummy">
+      <div class="entry bg d-flex justify-content-start align-items-center"></div>
+      <div class="entry padding-l40"></div>
+    </div>
+    <anosrv-button buttonId="button-urlaub-guthaben-save" class="button-absolute" (click)="save()" text="speichern"></anosrv-button>
+  </div>
+</form>
+
+<anosrv-app-modal modalId="addressModal">
+  <ul>
+    <li>Du erhältst von uns Briefe.</li>
+    <li>Damit Dich die Briefe auch erreichen, benötigen wir Deine aktuelle Adresse.</li>
+    <li>
+      An diese Adresse werden wir die für Dich bestimmte Post senden.*
+
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/">
+        www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren
+      </a>
+    </li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="bankModal">
+  <ul>
+    <li>Mit der Eingabe Deiner Bankdaten wollen wir sicherstellen, dass Du auch wirklich Deine Urlaubsvergütung erhältst.</li>
+    <li>Für die Auszahlung wird ein auch auf Deinen Namen bestehendes Bankkonto benötigt.</li>
+    <li>Eine Bar- oder Scheckzahlung ist nicht möglich.</li>
+    <li>Bitte gib die gültige IBAN Deiner Kontoverbindung an. Die Kontodaten findest Du auf Deiner Scheck-/Giro-/Debitkarte.</li>
+    <li>
+      Den BIC nur angeben, wenn wir auf ein Konto außerhalb Deutschlands überweisen sollen.
+    </li>
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/">
+        www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren
+      </a>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="steuerIDModalLong">
+  <ul>
+    <li>Die Auszahlung deines Guthabens ist steuerpflichtig.</li>
+    <li>Wir müssen von dem Guthaben Steuern einbehalten und an die Finanzverwaltung zahlen.</li>
+    <li>Damit die gezahlte Steuer auch Dir zugeordnet werden kann, benötigen wir Deine Steuer-ID.</li>
+    <li>Die Steuer-ID fidest Du z.B. auf der Lohnsteuerbescheinigung, einem Lohn- oder Einkommensteuerbescheid. Schreiben des Finanzamts, dem Schreiben des Bundeszentralamt für Steuern.</li>
+    <li>Die Steuer-ID wird jedem Steuerpflichtigen mit diesem Schreiben mitgeteilt.</li>
+    <li>Die Steuer-ID ändert sich nicht und kann später von Dir nicht mehr geändert werden.*</li>
+    <li>
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/">
+        www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren
+      </a>
+    </li>
+  </ul>
+</anosrv-app-modal>

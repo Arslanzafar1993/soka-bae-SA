@@ -1,0 +1,553 @@
+{
+  "hinweise": [],
+  "payload": {
+    "istPLZValide": null,
+    "landDTOList": [
+      {
+        "name": "Afghanistan",
+        "portalId": 2,
+        "code": "AF"
+      },
+      {
+        "name": "Ägypten",
+        "portalId": 29,
+        "code": "EG"
+      },
+      {
+        "name": "Albanien",
+        "portalId": 3,
+        "code": "AL"
+      },
+      {
+        "name": "Algerien",
+        "portalId": 26,
+        "code": "DZ"
+      },
+      {
+        "name": "Andorra",
+        "portalId": 4,
+        "code": "AD"
+      },
+      {
+        "name": "Arabische Emirate",
+        "portalId": 100,
+        "code": "AE"
+      },
+      {
+        "name": "Argentinien",
+        "portalId": 72,
+        "code": "AR"
+      },
+      {
+        "name": "Armenien",
+        "portalId": 5,
+        "code": "AM"
+      },
+      {
+        "name": "Aserbaidschan",
+        "portalId": 6,
+        "code": "AZ"
+      },
+      {
+        "name": "Australien",
+        "portalId": 7,
+        "code": "AU"
+      },
+      {
+        "name": "Barbados",
+        "portalId": 9,
+        "code": "BB"
+      },
+      {
+        "name": "Belgien",
+        "portalId": 8,
+        "code": "BE"
+      },
+      {
+        "name": "Bosnien-Herzegowina",
+        "portalId": 11,
+        "code": "BA"
+      },
+      {
+        "name": "Brasilien",
+        "portalId": 13,
+        "code": "BR"
+      },
+      {
+        "name": "Bulgarien",
+        "portalId": 10,
+        "code": "BG"
+      },
+      {
+        "name": "Chile",
+        "portalId": 73,
+        "code": "CL"
+      },
+      {
+        "name": "China einschl. Tibet",
+        "portalId": 94,
+        "code": "CN"
+      },
+      {
+        "name": "Dänemark",
+        "portalId": 25,
+        "code": "DK"
+      },
+      {
+        "name": "Deutschland",
+        "portalId": 24,
+        "code": "DE"
+      },
+      {
+        "name": "Estland",
+        "portalId": 28,
+        "code": "EE"
+      },
+      {
+        "name": "Färöer",
+        "portalId": 33,
+        "code": "FO"
+      },
+      {
+        "name": "Finnland",
+        "portalId": 31,
+        "code": "FI"
+      },
+      {
+        "name": "Frankreich",
+        "portalId": 30,
+        "code": "FR"
+      },
+      {
+        "name": "Gambia",
+        "portalId": 104,
+        "code": "GM"
+      },
+      {
+        "name": "Georgien",
+        "portalId": 35,
+        "code": "GE"
+      },
+      {
+        "name": "Ghana",
+        "portalId": 36,
+        "code": "GH"
+      },
+      {
+        "name": "Gibraltar",
+        "portalId": 37,
+        "code": "GI"
+      },
+      {
+        "name": "Griechenland",
+        "portalId": 38,
+        "code": "GR"
+      },
+      {
+        "name": "Großbritannien",
+        "portalId": 34,
+        "code": "GB"
+      },
+      {
+        "name": "Insel Man",
+        "portalId": 58,
+        "code": "GB"
+      },
+      {
+        "name": "Irak",
+        "portalId": 45,
+        "code": "IQ"
+      },
+      {
+        "name": "Iran",
+        "portalId": 43,
+        "code": "IR"
+      },
+      {
+        "name": "Irland",
+        "portalId": 44,
+        "code": "IE"
+      },
+      {
+        "name": "Island",
+        "portalId": 46,
+        "code": "IS"
+      },
+      {
+        "name": "Israel",
+        "portalId": 42,
+        "code": "IL"
+      },
+      {
+        "name": "Italien",
+        "portalId": 41,
+        "code": "IT"
+      },
+      {
+        "name": "Japan",
+        "portalId": 47,
+        "code": "JP"
+      },
+      {
+        "name": "Jemen",
+        "portalId": 106,
+        "code": "YE"
+      },
+      {
+        "name": "Jordanien",
+        "portalId": 48,
+        "code": "JO"
+      },
+      {
+        "name": "Kamerun",
+        "portalId": 15,
+        "code": "CM"
+      },
+      {
+        "name": "Kanada",
+        "portalId": 16,
+        "code": "CA"
+      },
+      {
+        "name": "Kanalinseln",
+        "portalId": 49,
+        "code": "GB"
+      },
+      {
+        "name": "Kapverden",
+        "portalId": 21,
+        "code": "CV"
+      },
+      {
+        "name": "Kasachstan",
+        "portalId": 50,
+        "code": "KZ"
+      },
+      {
+        "name": "Katar",
+        "portalId": 71,
+        "code": "QA"
+      },
+      {
+        "name": "Kosovo",
+        "portalId": 105,
+        "code": "XK"
+      },
+      {
+        "name": "Kroatien",
+        "portalId": 40,
+        "code": "HR"
+      },
+      {
+        "name": "Kuwait",
+        "portalId": 51,
+        "code": "KW"
+      },
+      {
+        "name": "Lettland",
+        "portalId": 55,
+        "code": "LV"
+      },
+      {
+        "name": "Libanon",
+        "portalId": 75,
+        "code": "LB"
+      },
+      {
+        "name": "Libyen",
+        "portalId": 53,
+        "code": "LY"
+      },
+      {
+        "name": "Liechtenstein",
+        "portalId": 32,
+        "code": "LI"
+      },
+      {
+        "name": "Litauen",
+        "portalId": 54,
+        "code": "LT"
+      },
+      {
+        "name": "Luxemburg",
+        "portalId": 52,
+        "code": "LU"
+      },
+      {
+        "name": "Malediven",
+        "portalId": 12,
+        "code": "MV"
+      },
+      {
+        "name": "Mali",
+        "portalId": 76,
+        "code": "ML"
+      },
+      {
+        "name": "Malta",
+        "portalId": 56,
+        "code": "MT"
+      },
+      {
+        "name": "Marokko",
+        "portalId": 57,
+        "code": "MA"
+      },
+      {
+        "name": "Mauretanien",
+        "portalId": 74,
+        "code": "MR"
+      },
+      {
+        "name": "Mazedonien",
+        "portalId": 64,
+        "code": "MK"
+      },
+      {
+        "name": "Mexiko",
+        "portalId": 63,
+        "code": "MX"
+      },
+      {
+        "name": "Moldau",
+        "portalId": 61,
+        "code": "MD"
+      },
+      {
+        "name": "Monaco",
+        "portalId": 60,
+        "code": "MC"
+      },
+      {
+        "name": "Montenegro",
+        "portalId": 62,
+        "code": "ME"
+      },
+      {
+        "name": "Neuseeland",
+        "portalId": 67,
+        "code": "NZ"
+      },
+      {
+        "name": "Niederlande",
+        "portalId": 66,
+        "code": "NL"
+      },
+      {
+        "name": "Niger",
+        "portalId": 77,
+        "code": "NE"
+      },
+      {
+        "name": "Norwegen",
+        "portalId": 65,
+        "code": "NO"
+      },
+      {
+        "name": "Oman",
+        "portalId": 59,
+        "code": "OM"
+      },
+      {
+        "name": "Österreich",
+        "portalId": 1,
+        "code": "AT"
+      },
+      {
+        "name": "Pakistan",
+        "portalId": 69,
+        "code": "PK"
+      },
+      {
+        "name": "Polen",
+        "portalId": 70,
+        "code": "PL"
+      },
+      {
+        "name": "Portugal",
+        "portalId": 68,
+        "code": "PT"
+      },
+      {
+        "name": "Rumänien",
+        "portalId": 78,
+        "code": "RO"
+      },
+      {
+        "name": "Russland",
+        "portalId": 82,
+        "code": "RU"
+      },
+      {
+        "name": "Sambia",
+        "portalId": 109,
+        "code": "ZM"
+      },
+      {
+        "name": "San Marino",
+        "portalId": 81,
+        "code": "SM"
+      },
+      {
+        "name": "Saudi-Arabien",
+        "portalId": 84,
+        "code": "SA"
+      },
+      {
+        "name": "Schweden",
+        "portalId": 83,
+        "code": "SE"
+      },
+      {
+        "name": "Schweiz",
+        "portalId": 17,
+        "code": "CH"
+      },
+      {
+        "name": "Senegal",
+        "portalId": 88,
+        "code": "SN"
+      },
+      {
+        "name": "Serbien",
+        "portalId": 80,
+        "code": "RS"
+      },
+      {
+        "name": "Serbien-Montenegro",
+        "portalId": 20,
+        "code": "CS"
+      },
+      {
+        "name": "Singapur",
+        "portalId": 85,
+        "code": "SG"
+      },
+      {
+        "name": "Slowakei",
+        "portalId": 86,
+        "code": "SK"
+      },
+      {
+        "name": "Slowenien",
+        "portalId": 87,
+        "code": "SI"
+      },
+      {
+        "name": "Spanien",
+        "portalId": 27,
+        "code": "ES"
+      },
+      {
+        "name": "Sri Lanka",
+        "portalId": 19,
+        "code": "LK"
+      },
+      {
+        "name": "Südafrika",
+        "portalId": 108,
+        "code": "ZA"
+      },
+      {
+        "name": "Sudan",
+        "portalId": 89,
+        "code": "SD"
+      },
+      {
+        "name": "Syrien",
+        "portalId": 90,
+        "code": "SY"
+      },
+      {
+        "name": "Tadschikistan",
+        "portalId": 92,
+        "code": "TJ"
+      },
+      {
+        "name": "Tansania",
+        "portalId": 98,
+        "code": "TZ"
+      },
+      {
+        "name": "Thailand",
+        "portalId": 91,
+        "code": "TH"
+      },
+      {
+        "name": "Togo",
+        "portalId": 93,
+        "code": "TG"
+      },
+      {
+        "name": "Tschad",
+        "portalId": 18,
+        "code": "TD"
+      },
+      {
+        "name": "Tschechien",
+        "portalId": 23,
+        "code": "CZ"
+      },
+      {
+        "name": "Tunesien",
+        "portalId": 96,
+        "code": "TN"
+      },
+      {
+        "name": "Türkei",
+        "portalId": 95,
+        "code": "TR"
+      },
+      {
+        "name": "Turkmenistan",
+        "portalId": 97,
+        "code": "TM"
+      },
+      {
+        "name": "Ukraine",
+        "portalId": 99,
+        "code": "UA"
+      },
+      {
+        "name": "Ungarn",
+        "portalId": 39,
+        "code": "HU"
+      },
+      {
+        "name": "Uruguay",
+        "portalId": 79,
+        "code": "UY"
+      },
+      {
+        "name": "Usbekistan",
+        "portalId": 102,
+        "code": "UZ"
+      },
+      {
+        "name": "Vatikanstadt",
+        "portalId": 103,
+        "code": "VA"
+      },
+      {
+        "name": "Venezuela",
+        "portalId": 107,
+        "code": "VE"
+      },
+      {
+        "name": "Vereinigte Staaten",
+        "portalId": 101,
+        "code": "US"
+      },
+      {
+        "name": "Weißrussland",
+        "portalId": 14,
+        "code": "BY"
+      },
+      {
+        "name": "Zypern",
+        "portalId": 22,
+        "code": "CY"
+      }
+    ]
+  }
+}

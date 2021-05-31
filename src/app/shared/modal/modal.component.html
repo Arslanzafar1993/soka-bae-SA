@@ -1,0 +1,14 @@
+<div [@dialog] *ngIf="visible" class="modal-mask" (click)="closeBackdropIntern()">
+  <svg version="1.1" id="link-modal-close" (click)="close()" class="modal-close" x="0px" y="0px"
+       width="20" height="20" viewBox="0 0 612 612" fill="#ffffff">
+    <g>
+      <polygon points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397 
+        306,341.411 576.521,611.397 612,575.997 341.459,306.011"/>
+    </g>
+  </svg>
+  <div class="modal-container" [ngClass]="{ 'modal-container-question': isCancelQuestion }"
+       (click)="$event.stopPropagation()">
+
+    <ng-content></ng-content>
+  </div>
+</div>

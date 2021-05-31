@@ -1,0 +1,28 @@
+<div class="tile d-lg-none" [class.masked]="masked" [style.background-image]="'url(assets/images/' + backgroundImage + ')'">
+  <div class="tile-text">
+    <anosrv-svg-icon-sprite
+      [src]="svgIcon"
+      classes="tile-icon"
+      width="25"
+      viewBox="0 -3 25 25">
+    </anosrv-svg-icon-sprite>
+    {{ text }}
+  </div>
+</div>
+
+<div class="d-none tile d-lg-block" [class.masked]="masked">
+  <div class="tile-up" [style.background-image]="'url(assets/images/' + backgroundImageDesktop + ')'">
+    <div class="tile-text">
+      <anosrv-svg-icon-sprite
+        [src]="svgIcon"
+        classes="tile-icon"
+        width="25"
+        viewBox="0 -3 25 25">
+      </anosrv-svg-icon-sprite>
+      {{ text }}
+    </div>  
+  </div>
+  <div class="tile-down">
+    <ng-content></ng-content>
+  </div>
+</div>

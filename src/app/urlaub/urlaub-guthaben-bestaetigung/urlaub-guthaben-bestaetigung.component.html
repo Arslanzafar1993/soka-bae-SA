@@ -1,0 +1,62 @@
+<div class="background-auszahlung">
+  <h1 class="urlaub-auszahlen-h1">BESTÄTIGUNG</h1>
+</div>
+
+<div class="urlaub-auszahlen-container margin-t90 bg-green">
+  <div class="header-container">
+    <div class="left">
+      <h2>Geschafft!</h2>
+      <p>
+        Du erhältst in Kürze noch eine Bestätigung per E-Mail.
+        Hier haben wir nochmals alle Daten Deines Antrags auf Auszahlung zusammengefasst.
+      </p>
+    </div>
+    <span *ngIf="showIcons" routerLink="/urlaub/guthaben/ende" class="fill-green"
+          [innerHtml]="iconService.getIcon('check')"></span>
+  </div>
+
+  <div class="zusammenfassung-container">
+    <div class="entry bg">
+      Guthaben
+    </div>
+    <div class="entry padding-l40 icon-container">
+      {{ userStoreService.user.value.netto | currency:'EUR' }}
+    </div>
+
+    <div class="entry bg">
+      Vor- und Nachname
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.vorname }} {{ userStoreService.user.value.name }}
+    </div>
+
+    <div class="entry bg">
+      E-Mail
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.email }}
+    </div>
+
+    <div class="entry bg">
+      IBAN
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.iban }}
+    </div>
+
+    <div class="entry bg">
+      Geldinstitut
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.geldinstitut }}
+    </div>
+
+    <div class="entry bg">
+    </div>
+    <div class="entry padding-l40">
+    </div>
+  </div>
+
+  <anosrv-button buttonId="button-beenden" *ngIf="showIcons" routerLink="/urlaub/guthaben/ende"
+                 class="button-absolute" text="beenden"></anosrv-button>
+</div>

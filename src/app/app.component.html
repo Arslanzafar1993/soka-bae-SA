@@ -1,0 +1,271 @@
+<div class="container px-0">
+  <div class="sticky-container">
+    <anosrv-header *ngIf="showHeader"></anosrv-header>
+    <anosrv-header-light *ngIf="showHeaderLight"></anosrv-header-light>
+    <anosrv-toolbar *ngIf="showToolbar"></anosrv-toolbar>
+    <anosrv-toolbar-user *ngIf="router.url == '/user'"></anosrv-toolbar-user>
+    <anosrv-toolbar-login *ngIf="router.url == '/login'"></anosrv-toolbar-login>
+  </div>
+
+  <div id="mainmenu" class="overflow-hidden">
+    <anosrv-sidenav-container #sideNavContainer [autoZIndex]="false" [showCloseIcon]="true" position="top">
+      <anosrv-sidebar (toggled)="sideNavContainer.toggleVisibility($event)" name="profileNavSidebar" position="top" showCloseIcon="right">
+        <nav aria-label="Profilnavigation" id="profile-nav">
+          <ul>
+            <li class="menu-item-first">
+              <a id="menu-link-user" class="menu-item" routerLink="/user">
+                <svg height="33" viewBox="0 0 33 33" width="33" xmlns="http://www.w3.org/2000/svg">
+                  <g id="Icon-Profil" transform="translate(0 -7)">
+                    <path
+                      d="M-2014.907,4911.653a16.343,16.343,0,0,1,8.6-2.962v-1.523a8.243,8.243,0,0,1-3.693-6.86c0-4.588,0-8.308,5.538-8.308s5.54,3.72,5.54,8.308a8.243,8.243,0,0,1-3.693,6.86v1.523a16.4,16.4,0,0,1,8.559,2.929,15.936,15.936,0,0,1-10.445,3.88A15.94,15.94,0,0,1-2014.907,4911.653Z"
+                      fill="#404040"
+                      opacity="0.999"
+                      transform="translate(2021 -4876)"
+                    />
+                    <g
+                      data-name="Ellipse 19"
+                      fill="none"
+                      id="Ellipse_19"
+                      opacity="0.999"
+                      stroke="#404040"
+                      stroke-width="1"
+                      transform="translate(0 7)"
+                    >
+                      <circle cx="16.5" cy="16.5" r="16.5" stroke="none" />
+                      <circle cx="16.5" cy="16.5" fill="none" r="16" />
+                    </g>
+                  </g>
+                </svg>
+                <span class="menu-text menu-username">{{userStoreService.user.value.fullname}}<br/>Mein Profil</span>
+              </a>
+            </li>
+            <li id="menu-link-einstellungen" class="menu-item-top">
+              <a class="menu-item" routerLink="/" disabled>
+                <svg height="20" viewBox="0 0 16 16" width="20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#ccc" d="M14.59 9.535c-0.839-1.454-0.335-3.317 1.127-4.164l-1.572-2.723c-0.449 0.263-0.972 0.414-1.529 0.414-1.68 0-3.042-1.371-3.042-3.062h-3.145c0.004 0.522-0.126 1.051-0.406 1.535-0.839 1.454-2.706 1.948-4.17 1.106l-1.572 2.723c0.453 0.257 0.845 0.634 1.123 1.117 0.838 1.452 0.336 3.311-1.12 4.16l1.572 2.723c0.448-0.261 0.967-0.41 1.522-0.41 1.675 0 3.033 1.362 3.042 3.046h3.145c-0.001-0.517 0.129-1.040 0.406-1.519 0.838-1.452 2.7-1.947 4.163-1.11l1.572-2.723c-0.45-0.257-0.839-0.633-1.116-1.113zM8 11.24c-1.789 0-3.24-1.45-3.24-3.24s1.45-3.24 3.24-3.24c1.789 0 3.24 1.45 3.24 3.24s-1.45 3.24-3.24 3.24z"/>                </svg>
+                <span class="menu-text menu-item-disabled">{{ "profile-nav.einstellungen" | translate }}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 16 16"
+                >
+                  <path fill="#ccc" d="M4.957 5.543l-1.414 1.414 4.457 4.457 4.457-4.457-1.414-1.414-3.043 3.043z"></path>
+                </svg>
+              </a>
+            </li>
+            <li id="menu-link-logout" class="menu-item-top menu-item-top-bottom">
+              <a class="menu-item" (click)="loginService.logout()">
+                <svg height="21" viewBox="0 0 18.375 21" width="20" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#404040" d="M12.813,3.006V5.793a6.552,6.552,0,1,1-5.25,0V3.006a9.188,9.188,0,1,0,5.25,0ZM8.875,0H11.5V10.5H8.875Z" />
+                </svg>
+                <span class="menu-text">{{ "profile-nav.logout" | translate }}</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </anosrv-sidebar>
+
+      <anosrv-sidebar
+        (toggled)="sideNavContainer.toggleVisibility($event)"
+        name="mainNavSidebar"
+        position="left"
+        showCloseIcon="left"
+        styleClass="ul-sidebar-left-padding"
+      >
+        <nav aria-label="Mainnavigation" id="main-nav">
+          <ul>
+            <li>
+              <a id="sidebar-link-home" class="menu-item" routerLink="/home">
+                <svg height="21" viewBox="0 0 23.147 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M23.147,13.131,11.573,4.147,0,13.131V9.468L11.573.484,23.147,9.468ZM20.254,12.8v8.68H14.467V15.7H8.68v5.787H2.893V12.8l8.68-6.51Z"
+                    fill="#404040"
+                    transform="translate(0 -0.484)"
+                  />
+                </svg>
+                <span class="menu-text">{{ "main-nav.home" | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a id="sidebar-link-urlaub" class="menu-item" routerLink="/urlaub">
+                <svg height="21.017" viewBox="0 0 21.377 21.017" width="21.377" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M26.566,25.633a.475.475,0,0,0-.7.3l-1.733,4.219H18.108a.566.566,0,0,0-.5.6.6.6,0,0,0,.5.6h1.444l-.908,1.858H9.2a.566.566,0,0,0-.5.6.6.6,0,0,0,.5.6h1.857L9.9,36.932a.722.722,0,0,0,.206.854.519.519,0,0,0,.248.1.5.5,0,0,0,.454-.3l1.444-3.114h10.4l1.527,3.013a.464.464,0,0,0,.454.3.519.519,0,0,0,.248-.1.674.674,0,0,0,.165-.854l-1.362-2.611,3.136-7.734A.735.735,0,0,0,26.566,25.633Zm-5.818,5.775h2.888l-.743,1.858H19.8Z"
+                    transform="translate(-5.486 -16.87)"
+                  />
+                  <path
+                    d="M25.495,44.192a.615.615,0,0,0-.5.7l.3,1.657a.6.6,0,0,0,.6.5H26a.615.615,0,0,0,.5-.7l-.3-1.657A.615.615,0,0,0,25.495,44.192Z"
+                    transform="translate(-15.48 -26.139)"
+                  />
+                  <path
+                    d="M21.695,22.792a.615.615,0,0,0-.5.7l1.256,7.282a.6.6,0,0,0,.6.5h.1a.615.615,0,0,0,.5-.7L22.4,23.295A.59.59,0,0,0,21.695,22.792Z"
+                    transform="translate(-13.338 -14.23)"
+                  />
+                  <path
+                    d="M18.446,4.952h.1a.615.615,0,0,0,.5-.7L18.9,3.295a.611.611,0,1,0-1.205.2l.151.954A.6.6,0,0,0,18.446,4.952Z"
+                    transform="translate(-11.231 -2.785)"
+                  />
+                  <path
+                    d="M7.887,16.43c0,.05.048.05,0,0a.164.164,0,0,1,.1.05.17.17,0,0,1,.143.05h.1a.276.276,0,0,0,.191-.05H8.46c.048-.05.1-.05.143-.1a6.675,6.675,0,0,1,3.008-1.707l.478-.1a6.594,6.594,0,0,1,3.438.552h.525c.048,0,.1-.05.143-.05l.048-.05a.048.048,0,0,0,.048-.05,5.224,5.224,0,0,1,1.958-1.256,3.96,3.96,0,0,1,2.579.151.49.49,0,0,0,.621-.151.68.68,0,0,0,.143-.653A10.6,10.6,0,0,0,19.3,9.8,9.854,9.854,0,0,0,10.991,7.29l-.669.1A10.2,10.2,0,0,0,2.3,16.48a.7.7,0,0,0,.334.6.413.413,0,0,0,.239.05.527.527,0,0,0,.382-.151,4.161,4.161,0,0,1,2.388-1.055A5.024,5.024,0,0,1,7.887,16.43ZM11.9,13.316h0l-.478.1a6.747,6.747,0,0,0-2.674,1.256c.048-2.059.43-5.173,1.862-6.026l.43-.05c1.624.251,3.008,3.063,3.725,4.972A6.536,6.536,0,0,0,11.9,13.316Zm7.831-1a4.221,4.221,0,0,0-2.053.2A5.874,5.874,0,0,0,16,13.467a13.822,13.822,0,0,0-2.77-4.972A8.067,8.067,0,0,1,19.729,12.312ZM8.555,9.349a14.478,14.478,0,0,0-1,5.675,6.414,6.414,0,0,0-1.91-.3,4.093,4.093,0,0,0-1.958.552A8.749,8.749,0,0,1,8.555,9.349Z"
+                    transform="translate(-2.3 -4.972)"
+                  />
+                </svg>
+                <span class="menu-text">{{ "main-nav.urlaub" | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a id="sidebar-link-info" class="menu-item" routerLink="/hilfe">
+                <svg height="20.999" viewBox="0 0 20.999 20.999" width="20.999" xmlns="http://www.w3.org/2000/svg">
+                  <g transform="translate(7 4)">
+                    <g transform="translate(-7 -4)">
+                      <path
+                        d="M7,4.984A.988.988,0,0,1,7.984,4h.656a.988.988,0,0,1,.984.984v.656a.988.988,0,0,1-.984.984H7.984A.988.988,0,0,1,7,5.641Z"
+                        transform="translate(2.187 1.25)"
+                      />
+                      <path d="M11.25,13.562H6V12.25H7.312V8.312H6V7H9.937v5.25H11.25Z" transform="translate(1.875 2.187)" />
+                      <path
+                        d="M10.5,0A10.5,10.5,0,1,0,21,10.5,10.5,10.5,0,0,0,10.5,0Zm0,19.03A8.531,8.531,0,1,1,19.03,10.5,8.531,8.531,0,0,1,10.5,19.03Z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                <span class="menu-text">{{ "main-nav.info" | translate }}</span>
+              </a>
+            </li>
+            <li>
+              <a id="sidebar-link-antragdaten" class="menu-item" routerLink="/antragsdaten">
+                <span class="menu-text">Antragdaten</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </anosrv-sidebar>
+
+      <div sidenav-content>
+        <div>
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </anosrv-sidenav-container>
+  </div>
+  <anosrv-footer></anosrv-footer>
+</div>
+
+<anosrv-app-modal
+  [(visible)]="modalService.showGuardModal"
+  (closeModal)="modalService.showGuardModal = !modalService.showGuardModal"
+  [closeBackdrop]="false"
+  [isCancelQuestion]="true">
+  <ng-container>
+    <p>{{ modalService.guardModalText }}</p>
+    <input type="submit" id="button-modal-nein" (click)="choose(false)" class="cancel-button" value="nein"/>
+    <input type="submit" id="button-modal-ja"  (click)="choose(true)" class="save-button" value="ja"/>
+  </ng-container>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="urlaubstageModal">
+  <h1>Urlaubstage</h1>
+  <ul>
+    <li>Deine Urlaubstage werden angespart.</li>
+    <li>Bist du 12 Tage beschäftigt, erhältst du einen Tag Urlaub.</li>
+    <li>Für jeden Monat kannst Du maximal 2,5 Tage Urlaub ansparen.</li>
+    <li>In einem Jahr sind dies maximal 30 Tage.</li>
+    <li>Schwerbehinderte Arbeitnehmer (mind. 50%) haben einen um 5 Tage erhöhten Urlaubsanspruch*</li>
+
+    <span class="details">*detaillierte Informationen findest Du unter</span>
+    <a class="link" target="_blank" href="www.sokabau/hierdenlink.de">www.sokabau/hierdenlink.de</a>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="urlaubVerguetungModal">
+  <h1>Urlaubsvergütung</h1>
+  <ul>
+    <li>Die Urlaubsvergütung berechnet sich aus dem uns gemeldeten Bruttolohn und uns mitgeteilten Ausfallstunden aus Krankheit oder Saison-Kurzarbeit.</li>
+    <li>Dein jeweiliger Arbeitgeber entrichtet die Urlaubsvergütung an SOKA-BAU</li>
+    <li>Die gezahlten Beträge werden bei SOKA-BAU für Dich hinterlegt.</li>
+    <li>Nimmst Du Deinen Urlaub, erhält Dein Arbeitgeber aus dem hinterlegten Betrag die zu zahlende Urlaubsvergütung zurück.</li>
+    <li>Die Urlaubsvergütung erhältst Du meistens mit der nächsten Lohnabrechnung nach Deinem Urlaub.*</li>
+
+    <span class="details">*detaillierte Informationen findest Du unter</span>
+    <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren">http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren</a>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="dataModal">
+  <h1>Stand der Daten </h1>
+  <ul>
+    <li>Der Stand der Daten gibt an, welchen Monat der Lohnabrechnung wir berücksichtigt haben.</li>
+    <li>Deinen Urlaubsanspruch ermitteln wir aus den von Deinem Arbeitgeber mitgeteilten Daten.</li>
+    <li>Die Lohnabrechnungsdaten des Vormonats werden uns erst im laufenden Monat übermittelt.</li>
+    <li>Hier ein Beispiel: Der Lohn und der Urlaubsanspruch des Monats Mai muss uns erst bis 15. Juni mitgeteilt werden. Deshalb kann Dein Urlaubsanspruch erst ab Mitte Juni in der Berechnung berücksichtigt sein.</li>
+    <li>Deine Informationen zum vorhandenen Urlaub und die hier genannten Werten können abweichen. Dies passiert, wenn uns noch nicht alle Meldungen Deines Arbeitgebers vorliegen.</li>
+
+    <span class="details">*detaillierte Informationen findest Du unter <br/><a class="link" href="www.sokabau/hierdenlink.de">www.sokabau/hierdenlink.de</a></span>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="ibanModal">
+  <ul>
+    <li><strong>IBAN</strong> ist die Abkürzung für "International Bank Account Number"</li>
+    <li><strong>IBAN</strong> steht für das Wort Bankkontonummer.</li>
+    <li>Es handelt sich um eine weltweit gültige Nummer für ein Girokonto.</li>
+    <li>Die <strong>IBAN</strong> besteht in Deutschland aus 22 Stellen.</li>
+    <li>Die <strong>IBAN</strong> ist auf der Bank-/Giro- oder Debitkarte zu finden.</li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="bicModal">
+  <ul>
+    <li>Die Abkürzung <strong>BIC</strong> steht für "Bank Identifier Code"</li>
+    <li>Der <strong>BIC</strong> ermittelt sich häufig automatisch durch die Eingabe der IBAN.</li>
+    <li>Der BIC ist auf der Bank-/Giro- oder Debitkarte zu finden.</li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="bicModalShort">
+  <ul>
+    <li>Die BIC brauchst Du nur angeben, wenn wir auf ein Konto außerhalb Deutschlands überweisen sollen</li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="steuerIdModal">
+  <ul>
+    <li>Die Steuer-Identifikationsnummer (Steuer-ID) ändert sich nicht.</li>
+    <li>Deshalb kann die Steuer-ID nicht geändert werden.</li>
+    <li>Bei Fragen zur Steuer-ID bitte die SOKA-BAU Arbeitnehmer Hotline anrufen.*</li>
+
+    <span class="details"><a class="link" href="tel:0800/1000881">Arbeitnehmer Hotline 0800/1000881 (kostenfrei)</a></span>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="steuerModalLong">
+  <ul>
+    <li>Die Auszahlung deines Guthabens ist steuerpflichtig.</li>
+    <li>Wir müssen von dem Guthaben Steuern einbehalten und an die Finanzverwaltung zahlen.</li>
+    <li>Damit die gezahlte Steuer auch Dir zugeordnet werden kann, benötigen wir Deine Steuer-ID.</li>
+    <li>
+      Die Steuer-ID findest Du z. B. auf der Lohnsteuerbescheinigung, einem Lohn- oder Einkommensteuerbescheid, Schreiben des Finanzamts,
+      dem Schreiben des Bundeszentralamt für Steuern.
+    </li>
+    <li>Die Steuer-ID wird jedem Steuerpflichtigen mit diesem Scheiben mitgeteilt (Bild-Image siehe Anhang).</li>
+    <li>
+      Die Steuer-ID ändert sich nicht und kann später von Dir nicht mehr geändert werden.*
+    </li>
+  </ul>
+  <span class="details">*detaillierte Informationen findest Du unter</span>
+  <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/"
+    >www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren</a>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="konfessionModal">
+  <ul>
+    <li>Manchmal kann es erforderlich werden, dass Du angeben musst, ob Du kirchensteuerpflichtig bist.</li>
+    <li>Wenn wir etwas an Dich auszahlen und Du Kirchensteuer zahlst, dann müssen wir dies berücksichtigen.</li>
+    <li>Bitte kreuze an, welche Kirchensteuer du zahlst.</li>
+    <li>Wenn Du <strong>keine</strong> Kirchensteuer zahlst, kreuze „Nein“ an.</li>
+    <li>Wenn Du Dir nicht sicher bist, dann schaue in Deiner Lohnabrechnung nach. Dort kannst Du sehen, ob neben Lohn-
+      bzw. Einkommensteuer auch Kirchensteuer von Deinem Lohn abgezogen wurde.</li>
+  </ul>
+</anosrv-app-modal>

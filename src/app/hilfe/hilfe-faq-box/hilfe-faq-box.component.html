@@ -1,0 +1,18 @@
+<div class="faq-container">
+  <div class="faq-header" (click)="toggle()">
+    <span class="icon">
+      <span class="icon-overlay"></span>
+      <span class="icon-svg white" [innerHTML]="frageIcon"></span>
+    </span>
+    <span class="title">{{ title }}</span>
+    <span class="icon icon-right">
+      <span class="icon-overlay"></span>
+      <span class="icon-svg" [innerHTML]="chevron"></span>
+    </span>
+  </div>
+  <div class="faq-body" [class.hidden]="!expanded">
+    <div class="faq-body-content">
+      <ng-content></ng-content>
+    </div>
+  </div>
+</div>

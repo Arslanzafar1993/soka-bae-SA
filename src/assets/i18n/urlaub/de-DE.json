@@ -1,0 +1,30 @@
+{
+  "urlaub": {
+    "urlaubsanspruch": "Urlaubsanspruch",
+    "urlaubstage": "Deine Urlaubstage",
+    "urlaubstage_tage": "{{tage}} Tage",
+    "referenzdatum": "Stand der Daten",
+    "top-left-text": "Urlaub",
+    "modal": [
+      "Hey, Du hast noch Urlaub!",
+      "So viele freie Tage kannst Du noch nehmen.",
+      "Für jeden Tag zahlt Dein Arbeitgeber Dir Urlaubsvergütung."
+    ],
+    "headers": {
+      "h3": "Deine Urlaubstage",
+      "h4": "Urlaubsvergütung dafür",
+      "gesamtsumme": "Gesamtsumme"
+    },
+    "buttons": {
+      "details": "Details"
+    },
+    "overlay": {
+      "guthaben": "Dein Guthaben aus",
+      "verfalldatum": "Sichere Dir bis zum"
+    },
+    "detail": {
+      "urlaubstage": "Urlaubstage {{jahr}}",
+      "verguetung": "Urlaubsvergütung dafür"
+    }
+  }
+}

@@ -1,0 +1,156 @@
+<div class="background-auszahlung">
+  <svg class="modal-close" (click)="close()" width="22" height="22" viewBox="0 0 612 612">
+    <g>
+      <polygon
+        points="612,36.004 576.521,0.603 306,270.608 35.478,0.603 0,36.004 270.522,306.011 0,575.997 35.478,611.397
+        306,341.411 576.521,611.397 612,575.997 341.459,306.011"
+      />
+    </g>
+  </svg>
+  <h1 class="urlaub-auszahlen-h1">ZUSAMMENFASSUNG</h1>
+</div>
+
+<div class="urlaub-auszahlen-container margin-t90">
+  <p>
+    Wir haben den Antrag vorgemerkt. Wenn Du die Auszahlung wirklich wünschst, dann klicke auf "bestätigen". Du kannst dann den Antrag nicht mehr zurücknehmen.
+    Du erhältst anschließend eine Bestätigung, dass wir Deinen Auszahlungswunsch erhalten haben und von uns bearbeitet wird.
+  </p>
+
+  <div class="zusammenfassung-container">
+    <div class="entry bg">
+      Guthaben Brutto
+    </div>
+    <div class="entry padding-l40 icon-container">
+      <span>&nbsp;</span>
+      <span class="currency">{{ userStoreService.user.value.wert | currency:'EUR' }}</span>
+      <anosrv-info-i name="bruttoModal"></anosrv-info-i>
+    </div>
+
+    <div class="entry bg">
+      gesetzliche Abzüge
+    </div>
+    <div class="entry padding-l40 icon-container">
+      <span>-</span>
+      <span class="currency">{{ userStoreService.user.value.abzuege | currency:'EUR' }}</span>
+      <anosrv-info-i name="steuerpflichtigModal"></anosrv-info-i>
+    </div>
+
+    <div class="entry bg">
+      Guthaben Netto
+    </div>
+    <div class="entry padding-l40 icon-container">
+      <span class="gesamtbetrag">=</span>
+      <span class="gesamtbetrag currency">{{ userStoreService.user.value.netto | currency:'EUR' }}</span>
+      <anosrv-info-i name="nettoModal"></anosrv-info-i>
+    </div>
+
+    <div class="entry bg">
+      Vor- Nachname
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.vorname }} {{ userStoreService.user.value.name }}
+    </div>
+
+    <div class="entry bg">
+      E-Mail
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.email }}
+    </div>
+
+    <div class="entry bg">
+      IBAN
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.iban }}
+    </div>
+
+    <div class="entry bg">
+      Geldinstitut
+    </div>
+    <div class="entry padding-l40">
+      {{ userStoreService.user.value.geldinstitut }}
+    </div>
+
+    <ng-container *ngIf="showBIC()">
+      <div class="entry bg">
+        BIC
+      </div>
+      <div class="entry padding-l40">
+        {{ userStoreService.user.value.bic }}
+      </div>
+    </ng-container>
+    <div class="entry bg">
+    </div>
+    <div class="entry padding-l40">
+    </div>
+  </div>
+
+  <anosrv-button
+    buttonId="button-next"
+    iconName="login"
+    buttonPosition="right"
+    class="button-absolute"
+    (click)="next()"
+    text="abschicken">
+  </anosrv-button>
+
+  <anosrv-button
+    buttonId="button-before"
+    iconName="chevron-left"
+    class="button-absolute-left"
+    (click)="back()"
+    text="zurück">
+  </anosrv-button>
+</div>
+
+<anosrv-app-modal modalId="bruttoModal">
+  <ul>
+    <li>Das Guthaben brutto ist das Gesamtguthaben ohne Steuerabzug.</li>
+    <li>Die Auszahlung Deines Guthabens ist steuerpflichtig.</li>
+    <li>Wir müssen bei der Auszahlung des Guthabens die Steuern einbehalten.</li>
+    <li>Die abgezogenen Steuern führen wir an die Finanzverwaltung ab.</li>
+    <li>Eine Auszahlung des Brutto-Guthabens ist nicht möglich.*</li>
+    <li>
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/"
+        >www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren</a
+      >
+    </li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="steuerpflichtigModal">
+  <ul>
+    <li>Die Auszahlung des Guthabens ist steuerpflichtig.</li>
+    <li>Wir sind verpflichtet eine pauschale Lohnsteuer von 20% zuzüglich Solidaritätszuschlag abzuziehen.</li>
+    <li>Nur wenn Du kirchensteuerpflichtig bist, wird auch die fällige Kirchensteuer berücksichtigt und abgezogen.*</li>
+    <li>Beispiel:</li>
+
+    <li class="currency">Bestehender Anspruch Urlaubsvergütung brutto<span class="betrag">1.000,00 €</span></li>
+    <li class="currency">Gesetzliche Abzüge (inkl. Kirchensteuer)<span class="betrag">229,00 €</span></li>
+    <li class="currency">Dein Guthaben netto, das Du von uns erhältst<span class="betrag">771,00 €</span></li>
+    <li>
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/"
+        >www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren</a
+      >
+    </li>
+  </ul>
+</anosrv-app-modal>
+
+<anosrv-app-modal modalId="nettoModal">
+  <ul>
+    <li>Das Guthaben netto ist der Betrag, den wir an Dich auszahlen werden.</li>
+    <li>Alle gesetzlichen Abzüge sind bereits berücksichtigt.</li>
+    <li>Du erhältst nach erfolgter Auszahlung eine Bescheinigung über die Abzüge.</li>
+    <li>Die Bescheinigung kannst Du dann für Deine Steuererklärung nutzen.*</li>
+    <li>
+      <span class="details">*detaillierte Informationen findest Du unter</span>
+      <a class="link" target="_blank" href="http://www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren/"
+        >www.soka-bau.de/arbeitnehmer/leistungen/urlaubsverfahren</a
+      >
+    </li>
+  </ul>
+</anosrv-app-modal>
+

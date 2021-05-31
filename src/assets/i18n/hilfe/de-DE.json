@@ -1,0 +1,106 @@
+{
+  "hilfe": {
+    "title": "Info & Hilfe",
+    "faq": "Häufig gestellte Fragen",
+    "faq-dropdown": "Themenauswahl",
+    "allgemein": "Allgemein",
+    "allgemein-teaser": "Login & Zugangsdaten, Datenschutz, persönliche Daten",
+    "urlaub": "Urlaub",
+    "urlaub-teaser": "Urlaubsanspruch, Verfallsfristen, Guthaben",
+    "details": "Details",
+    "hotline": "Hotline",
+    "hotline-teaser": "Wir sind gerne für Dich da!",
+    "hotline-nummer": "0800-1000881",
+    "hotline-teaser-details": "(kostenfrei, Mo-Fr 7:00 Uhr bis 17:00 Uhr)",
+    "hotline-anrufen": "anrufen",
+    "hotline-tel-link": "tel://+498001000881",
+    "faq-allgemein": {
+      "q1": {
+        "title": "Was kann der Arbeitnehmer-Onlineservice?",
+        "response": "Es handelt sich um einen Onlineservice von SOKA-BAU mit einem passwortgeschützten Bereich. Hier erhältst Du alle Informationen zu Deinen Urlaubsansprüchen."
+      },
+      "q2": {
+        "title": "Was kann ich im Arbeitnehmer-Onlineservice machen?",
+        "response": "Mit Deinem Account kannst Du Deine persönlichen Daten verwalten, Deine aktuellen Urlaubsansprüche einsehen und die Auszahlung Deiner verfallenen Urlaubsansprüche beantragen."
+      },
+      "q3": {
+        "title": "Wer kann sich registrieren?",
+        "response": "Registrieren können sich grundsätzlich alle Versicherten von SOKA-BAU."
+      },
+      "q4": {
+        "title": "Wo finde ich meine Steuer-ID?",
+        "response": "Deine Steuer-ID findest Du auf Deiner Lohnabrechnung, auf Deinem Lohn- oder Einkommensteuerbescheid, auf Schreiben des Finanzamtes oder einem Schreiben des Bundeszentralamts für Steuern."
+      },
+      "q5": {
+        "title": "Wo finde ich meine Arbeitnehmernummer? ",
+        "p1": "Deine individuelle 13-stellige Arbeitnehmernummer findest Du oben rechts unter",
+        "link": "Mein Profil -> Arbeitnehmernummer",
+        "p2": "Deine Arbeitnehmernummer lautet {{nummer}}."
+      },
+      "q6": {
+        "title": "Wo kann ich meine persönlichen Daten und Angaben ändern?",
+        "p1": "Deine persönlichen Daten, wie z.B. Deine Adresse, findest Du oben rechts unter",
+        "link": "Mein Profil -> meine Stammdaten",
+        "p2": "Mit Klick auf den Stift kannst Du Deine Daten bearbeiten."
+      },
+      "q7": {
+        "title": "Wieso kann ich nicht alle meine persönlichen Daten ändern?",
+        "response": "Bestimmte Daten, wie z.B. das Geburtsdatum, sind mit Deinem persönlichen Nutzerprofil und Deiner Arbeitnehmernummer bei SOKA-BAU verknüpft. Sie lassen sich deshalb nicht ändern. Wurden hier versehentlich falsche Angaben gemeldet,",
+        "link": "melde dich bitte bei uns."
+      },
+      "q8": {
+        "title": "Kann ich auch eine ausländische Bankverbindung hinterlegen?",
+        "response": "Ja, hierzu brauchen wir die IBAN und in diesem Fall den dazugehörigen BIC. Den BIC findest Du auf der Rückseite Deiner Bankkarte."
+      },
+      "q9": {
+        "title": "Warum sollte ich meine E-Mail Adresse hinterlegen?",
+        "response": "Sollte es Neuigkeiten zu Deinem Profil oder in Deinem Postfach geben, informieren wir dich per E-Mail. Außerdem kannst du mit Deiner E-Mail-Adresse z.B. ganz einfach Deine verfallene Urlaubsvergütung beantragen und wir können dich bei Rückfragen schneller erreichen. "
+      },
+      "q10": {
+        "title": "Kann ich meinen Online-Account jederzeit wieder löschen?",
+        "response": "TO BE CONTINUED..."
+      }
+    },
+    "faq-urlaub": {
+      "antrag-link": "Hier geht`s zum Antrag.",
+      "q1": {
+        "title": "Wie setzt sich mein Urlaubsanspruch zusammen?",
+        "response": "Bist Du 12 Tage beschäftigt, erhältst Du einen Tag Urlaub. Das heißt in einem Beschäftigungsmonat stehen dir maximal 2,5 Tage Urlaub zu - in einem Jahr maximal 30 Tage."
+      },
+      "q2": {
+        "title": "Wer zahlt mir meine Urlaubsvergütung?",
+        "response": "Die Urlaubsvergütung zahlt Dir Dein Arbeitgeber. Diese wird mit Deiner nächsten Lohnabrechnung nach Urlaubsantritt fällig. Sie setzt sich aus dem Urlaubsentgelt und dem zusätzlichen Urlaubsgeld zusammen."
+      },
+      "q3": {
+        "title": "Ich habe noch Ansprüche aus dem Jahr {{jahr}} - kann ich mir diese Auszahlen lassen?",
+        "response": "Das geht leider nicht, aber Du kannst Deine aktuellen Urlaubsansprüche noch bis zum 31.12.{{jahr}} bei Deinem Arbeitgeber nehmen."
+      },
+      "q4": {
+        "title": "Ich habe noch Urlaub aus {{jahr}} - was kann ich damit machen?",
+        "response": "Deine restlichen Urlaubstage aus {{jahr}} kannst Du nicht mehr als Urlaub nehmen. Du kannst sie Dir auszahlen lassen."
+      },
+      "q5": {
+        "title": "Ich arbeite nicht mehr in der Baubranche. Was passiert mit meinem Resturlaub?",
+        "response": "Deinen restlichen Urlaub kannst Du nicht in Dein neues Arbeitsverhältnis mitnehmen. Du kannst ihn Dir von SOKA-BAU auszahlen lassen."
+      },
+      "q6": {
+        "title": "Wieso stimmt mein angezeigter Urlaubsanspruch nicht mit meiner Lohnabrechnung überein?",
+        "p1": "Das liegt daran, dass wir Deinen Urlaubsanspruch aus den von Deinem Arbeitgeber mitgeteilten Daten ermitteln. Dein Arbeitgeber meldet SOKA-BAU im aktuellen Monat allerdings erst die Daten aus dem Vormonat.",
+        "p2": "Welchen Monat der Lohnabrechnung wir jeweils berücksichtigt haben, kannst du",
+        "link": "hier einsehen."
+      },
+      "q7": {
+        "title": "Welche Daten brauche ich, um mir meinen verfallenen Urlaubsanspruch auszahlen zu lassen?",
+        "response": "Für den Antrag benötigen wir",
+        "points": [
+          "Vor- und Nachname",
+          "Adresse",
+          "E-Mail-Adresse",
+          "Bankverbindung (IBAN, BIC, Kontoinhaber und Geldinstitut)",
+          "Steuer-ID",
+          "Angabe zu ggf. evangelischer oder römisch-katholischer Konfession (steuerpflichtig)"
+        ]
+      }
+    }
+  }
+}

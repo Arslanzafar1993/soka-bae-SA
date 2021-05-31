@@ -1,0 +1,61 @@
+<div class="section-container mt">
+  <div class="section-header">
+    <span class="icon mt-1" [innerHtml]="iconService.getIcon('soka')"></span>
+    <h2 class="margin-l5">{{ "hilfe.allgemein" | translate }}</h2>
+  </div>
+
+  <div class="section-body">
+    {{ "hilfe.allgemein-teaser" | translate }}
+  </div>
+
+  <anosrv-button
+    buttonId="button-hilfe-allgemein"
+    class="button-absolute"
+    [text]="'hilfe.details' | translate"
+    iconName="chevron-right"
+    buttonPosition="right"
+    routerLink="/hilfe/allgemein">
+  </anosrv-button>
+</div>
+
+<div class="section-container mt">
+  <div class="section-header">
+    <span class="icon mt-1" [innerHtml]="iconService.getIcon('urlaub')"></span>
+    <h2 class="margin-l5">{{ "hilfe.urlaub" | translate }}</h2>
+  </div>
+
+  <div class="section-body">
+    {{ "hilfe.urlaub-teaser" | translate }}
+  </div>
+
+  <anosrv-button
+    buttonId="button-hilfe-urlaub"
+    class="button-absolute"
+    [text]="'hilfe.details' | translate"
+    iconName="chevron-right"
+    buttonPosition="right"
+    routerLink="/hilfe/urlaub">
+  </anosrv-button>
+</div>
+
+<div class="section-container mt">
+  <div class="section-header">
+    <span class="icon mt-1" [innerHtml]="iconService.getIcon('phone')"></span>
+    <h2 class="margin-l5">{{ "hilfe.hotline" | translate }}</h2>
+  </div>
+
+  <div class="section-body">
+    {{ "hilfe.hotline-teaser" | translate }}
+    <span class="hotline-nummer">{{ "hilfe.hotline-nummer" | translate }}</span>
+
+    <span class="hotline-info">{{ "hilfe.hotline-teaser-details" | translate }}</span>
+  </div>
+
+  <anosrv-button
+    buttonId="button-hilfe-phonecall"
+    class="button-absolute"
+    [text]="'hilfe.hotline-anrufen' | translate"
+    iconName="phone"
+    [href]="'hilfe.hotline-tel-link' | translate">
+  </anosrv-button>
+</div>

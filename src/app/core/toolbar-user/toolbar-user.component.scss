@@ -1,0 +1,33 @@
+@import "~src/scss/variables";
+
+.toolbar-container {
+  display: flex;
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 9px;
+  padding-right: 9px;
+  position: relative;
+}
+
+.menu-text {
+  padding-left: 8px;
+  padding-right: 8px;
+  color: $main-text-color;
+  font-size: 15px;
+}
+
+.menu-username {
+  width: 135px;
+  display: inline-block;
+}
+
+.menu-item {
+  padding-left: 16px;
+}
+
+.cross-container {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}

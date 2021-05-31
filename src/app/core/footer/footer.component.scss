@@ -1,0 +1,39 @@
+@import "../../../scss/variables";
+
+.footer {
+  display: block;
+  height: 47px;
+  padding: 14px 8px 18px;
+
+  background: $color-white;
+  border-top: 1px solid $color-border;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 15px;
+  color: $color-text;
+  text-align: center;
+
+  @media (min-width: 992px) {
+    height:96px;
+    padding: 37px 16px 39px;
+    font-size: 18px;
+    border-bottom: 1px solid $color-border;
+  }
+
+  ul{
+    list-style: none;
+
+    li {
+      display: inline;
+    }
+
+    li:not(:last-child):after{
+      content: " | ";
+    }
+  }
+
+  a:link, a:visited, a:active {
+    color: $color-blue;
+    text-decoration: none;
+  }
+}
